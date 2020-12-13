@@ -1,0 +1,2620 @@
+2020-12-11 14:27:56 [127.0.0.1][-][sqa7hvfnrpvat53h44i8an4j9h][error][Error] Error: Access to undeclared static property: app\models\User::$users in /home/sandisk/Documents/lspbasic/models/User.php:61
+Stack trace:
+#0 /home/sandisk/Documents/lspbasic/models/LoginForm.php(76): app\models\User::findByUsername('admin')
+#1 /home/sandisk/Documents/lspbasic/models/LoginForm.php(48): app\models\LoginForm->getUser()
+#2 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/validators/InlineValidator.php(84): app\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'admin')
+#3 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/validators/Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(app\models\LoginForm), 'password')
+#4 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Model.php(368): yii\validators\Validator->validateAttributes(Object(app\models\LoginForm), Array)
+#5 /home/sandisk/Documents/lspbasic/models/LoginForm.php(62): yii\base\Model->validate()
+#6 /home/sandisk/Documents/lspbasic/controllers/SiteController.php(79): app\models\LoginForm->login()
+#7 [internal function]: app\controllers\SiteController->actionLogin()
+#8 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#10 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#11 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#12 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /home/sandisk/Documents/lspbasic/web/index.php(12): yii\base\Application->run()
+#14 {main}
+2020-12-11 14:27:56 [127.0.0.1][-][sqa7hvfnrpvat53h44i8an4j9h][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'WIMGWWQpxEFjWZsRFVgHrlXkJEBAtBXXQt-olCNpYp0xs2wODhipJCou6ihdIDKbeIJMAxDcIrAhi8nFQEQMzQ=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'XSRF-TOKEN' => 'eyJpdiI6IkhaZGJTTllReGpkVXpCYzZkSFRMbWc9PSIsInZhbHVlIjoiMDQ5K1BPMDNxNzZ3TkU5aWZPbWhIaFh1ZnhodldUckJTQzJpMyt0aXA4TzVpdUlNcFZ5Ujl1UUVIUTAyY2FQYXpXNnhEZTFXWjJ6Sjh5NmVqZEhKOXVFYXhseHdXQ05JWDh6ZFJYbXN0MEJWek1wOG5UdEh2TFV5V1hrRXJrWjgiLCJtYWMiOiJjYzk5NGVhYjZjNDQwYTA3ZTBkZGVhZWE0NTlhNTUwYzFlMTBjZjdhMGYwYWNkZGQ4ZjgxNTg0NWM1ZGNhMWMwIn0='
+    'laravel_session' => 'eyJpdiI6ImdQcTJkSnVCbWlxRlNpeHp1eHdabFE9PSIsInZhbHVlIjoiNkt0cmRmQTNxdkh5NW5IY1VFdWRyclRJUkc0TnU1LzhweWN2QXFSK3lBcXZKRzYrZ0RQTlNzTE5lekZoTWVRNWhoRHdpN2xkcGZEd2lSSWJuYmNRSTdNamFxaUFPR3ppQ092QVozZDFOaXo1bFRCYmdZQWYxTjZNYlg4ZEM1c0kiLCJtYWMiOiJlODEwZTNmZjY4ZjJiZDVjZjcyYzZhMmY5MWQwZjM1MDc3NDExMjhkZmQ5Yzg4YmQ3YTQxYzM5NTA5NmI3OGUwIn0='
+    'PHPSESSID' => 'sqa7hvfnrpvat53h44i8an4j9h'
+    '_csrf' => '00490c1f716644f76d79cbf82ccd512df15351cf9b9c62494bf45a48964520d7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"i0jWj1meIwq9Hx55-fhCPh7gcTaQc-nP\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '34604'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '228'
+    'HTTP_CONTENT_LENGTH' => '228'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=site%2Flogin'
+    'HTTP_COOKIE' => 'XSRF-TOKEN=eyJpdiI6IkhaZGJTTllReGpkVXpCYzZkSFRMbWc9PSIsInZhbHVlIjoiMDQ5K1BPMDNxNzZ3TkU5aWZPbWhIaFh1ZnhodldUckJTQzJpMyt0aXA4TzVpdUlNcFZ5Ujl1UUVIUTAyY2FQYXpXNnhEZTFXWjJ6Sjh5NmVqZEhKOXVFYXhseHdXQ05JWDh6ZFJYbXN0MEJWek1wOG5UdEh2TFV5V1hrRXJrWjgiLCJtYWMiOiJjYzk5NGVhYjZjNDQwYTA3ZTBkZGVhZWE0NTlhNTUwYzFlMTBjZjdhMGYwYWNkZGQ4ZjgxNTg0NWM1ZGNhMWMwIn0%3D; laravel_session=eyJpdiI6ImdQcTJkSnVCbWlxRlNpeHp1eHdabFE9PSIsInZhbHVlIjoiNkt0cmRmQTNxdkh5NW5IY1VFdWRyclRJUkc0TnU1LzhweWN2QXFSK3lBcXZKRzYrZ0RQTlNzTE5lekZoTWVRNWhoRHdpN2xkcGZEd2lSSWJuYmNRSTdNamFxaUFPR3ppQ092QVozZDFOaXo1bFRCYmdZQWYxTjZNYlg4ZEM1c0kiLCJtYWMiOiJlODEwZTNmZjY4ZjJiZDVjZjcyYzZhMmY5MWQwZjM1MDc3NDExMjhkZmQ5Yzg4YmQ3YTQxYzM5NTA5NmI3OGUwIn0%3D; PHPSESSID=sqa7hvfnrpvat53h44i8an4j9h; _csrf=00490c1f716644f76d79cbf82ccd512df15351cf9b9c62494bf45a48964520d7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22i0jWj1meIwq9Hx55-fhCPh7gcTaQc-nP%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'REQUEST_TIME_FLOAT' => 1607696876.0604
+    'REQUEST_TIME' => 1607696876
+]
+2020-12-11 14:29:31 [127.0.0.1][-][sqa7hvfnrpvat53h44i8an4j9h][error][yii\base\ErrorException:64] yii\base\ErrorException: Constant expression contains invalid operations in /home/sandisk/Documents/lspbasic/models/User.php:13
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2020-12-11 14:29:31 [127.0.0.1][-][sqa7hvfnrpvat53h44i8an4j9h][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'WIMGWWQpxEFjWZsRFVgHrlXkJEBAtBXXQt-olCNpYp0xs2wODhipJCou6ihdIDKbeIJMAxDcIrAhi8nFQEQMzQ=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'XSRF-TOKEN' => 'eyJpdiI6IkhaZGJTTllReGpkVXpCYzZkSFRMbWc9PSIsInZhbHVlIjoiMDQ5K1BPMDNxNzZ3TkU5aWZPbWhIaFh1ZnhodldUckJTQzJpMyt0aXA4TzVpdUlNcFZ5Ujl1UUVIUTAyY2FQYXpXNnhEZTFXWjJ6Sjh5NmVqZEhKOXVFYXhseHdXQ05JWDh6ZFJYbXN0MEJWek1wOG5UdEh2TFV5V1hrRXJrWjgiLCJtYWMiOiJjYzk5NGVhYjZjNDQwYTA3ZTBkZGVhZWE0NTlhNTUwYzFlMTBjZjdhMGYwYWNkZGQ4ZjgxNTg0NWM1ZGNhMWMwIn0='
+    'laravel_session' => 'eyJpdiI6ImdQcTJkSnVCbWlxRlNpeHp1eHdabFE9PSIsInZhbHVlIjoiNkt0cmRmQTNxdkh5NW5IY1VFdWRyclRJUkc0TnU1LzhweWN2QXFSK3lBcXZKRzYrZ0RQTlNzTE5lekZoTWVRNWhoRHdpN2xkcGZEd2lSSWJuYmNRSTdNamFxaUFPR3ppQ092QVozZDFOaXo1bFRCYmdZQWYxTjZNYlg4ZEM1c0kiLCJtYWMiOiJlODEwZTNmZjY4ZjJiZDVjZjcyYzZhMmY5MWQwZjM1MDc3NDExMjhkZmQ5Yzg4YmQ3YTQxYzM5NTA5NmI3OGUwIn0='
+    'PHPSESSID' => 'sqa7hvfnrpvat53h44i8an4j9h'
+    '_csrf' => '00490c1f716644f76d79cbf82ccd512df15351cf9b9c62494bf45a48964520d7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"i0jWj1meIwq9Hx55-fhCPh7gcTaQc-nP\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '34610'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=site%2Flogin'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '228'
+    'HTTP_CONTENT_LENGTH' => '228'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'XSRF-TOKEN=eyJpdiI6IkhaZGJTTllReGpkVXpCYzZkSFRMbWc9PSIsInZhbHVlIjoiMDQ5K1BPMDNxNzZ3TkU5aWZPbWhIaFh1ZnhodldUckJTQzJpMyt0aXA4TzVpdUlNcFZ5Ujl1UUVIUTAyY2FQYXpXNnhEZTFXWjJ6Sjh5NmVqZEhKOXVFYXhseHdXQ05JWDh6ZFJYbXN0MEJWek1wOG5UdEh2TFV5V1hrRXJrWjgiLCJtYWMiOiJjYzk5NGVhYjZjNDQwYTA3ZTBkZGVhZWE0NTlhNTUwYzFlMTBjZjdhMGYwYWNkZGQ4ZjgxNTg0NWM1ZGNhMWMwIn0%3D; laravel_session=eyJpdiI6ImdQcTJkSnVCbWlxRlNpeHp1eHdabFE9PSIsInZhbHVlIjoiNkt0cmRmQTNxdkh5NW5IY1VFdWRyclRJUkc0TnU1LzhweWN2QXFSK3lBcXZKRzYrZ0RQTlNzTE5lekZoTWVRNWhoRHdpN2xkcGZEd2lSSWJuYmNRSTdNamFxaUFPR3ppQ092QVozZDFOaXo1bFRCYmdZQWYxTjZNYlg4ZEM1c0kiLCJtYWMiOiJlODEwZTNmZjY4ZjJiZDVjZjcyYzZhMmY5MWQwZjM1MDc3NDExMjhkZmQ5Yzg4YmQ3YTQxYzM5NTA5NmI3OGUwIn0%3D; PHPSESSID=sqa7hvfnrpvat53h44i8an4j9h; _csrf=00490c1f716644f76d79cbf82ccd512df15351cf9b9c62494bf45a48964520d7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22i0jWj1meIwq9Hx55-fhCPh7gcTaQc-nP%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'REQUEST_TIME_FLOAT' => 1607696971.5317
+    'REQUEST_TIME' => 1607696971
+]
+2020-12-11 14:29:47 [127.0.0.1][-][sqa7hvfnrpvat53h44i8an4j9h][error][yii\base\ErrorException:64] yii\base\ErrorException: Constant expression contains invalid operations in /home/sandisk/Documents/lspbasic/models/User.php:13
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2020-12-11 14:29:47 [127.0.0.1][-][sqa7hvfnrpvat53h44i8an4j9h][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'WIMGWWQpxEFjWZsRFVgHrlXkJEBAtBXXQt-olCNpYp0xs2wODhipJCou6ihdIDKbeIJMAxDcIrAhi8nFQEQMzQ=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'XSRF-TOKEN' => 'eyJpdiI6IkhaZGJTTllReGpkVXpCYzZkSFRMbWc9PSIsInZhbHVlIjoiMDQ5K1BPMDNxNzZ3TkU5aWZPbWhIaFh1ZnhodldUckJTQzJpMyt0aXA4TzVpdUlNcFZ5Ujl1UUVIUTAyY2FQYXpXNnhEZTFXWjJ6Sjh5NmVqZEhKOXVFYXhseHdXQ05JWDh6ZFJYbXN0MEJWek1wOG5UdEh2TFV5V1hrRXJrWjgiLCJtYWMiOiJjYzk5NGVhYjZjNDQwYTA3ZTBkZGVhZWE0NTlhNTUwYzFlMTBjZjdhMGYwYWNkZGQ4ZjgxNTg0NWM1ZGNhMWMwIn0='
+    'laravel_session' => 'eyJpdiI6ImdQcTJkSnVCbWlxRlNpeHp1eHdabFE9PSIsInZhbHVlIjoiNkt0cmRmQTNxdkh5NW5IY1VFdWRyclRJUkc0TnU1LzhweWN2QXFSK3lBcXZKRzYrZ0RQTlNzTE5lekZoTWVRNWhoRHdpN2xkcGZEd2lSSWJuYmNRSTdNamFxaUFPR3ppQ092QVozZDFOaXo1bFRCYmdZQWYxTjZNYlg4ZEM1c0kiLCJtYWMiOiJlODEwZTNmZjY4ZjJiZDVjZjcyYzZhMmY5MWQwZjM1MDc3NDExMjhkZmQ5Yzg4YmQ3YTQxYzM5NTA5NmI3OGUwIn0='
+    'PHPSESSID' => 'sqa7hvfnrpvat53h44i8an4j9h'
+    '_csrf' => '00490c1f716644f76d79cbf82ccd512df15351cf9b9c62494bf45a48964520d7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"i0jWj1meIwq9Hx55-fhCPh7gcTaQc-nP\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '34614'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=site%2Flogin'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '228'
+    'HTTP_CONTENT_LENGTH' => '228'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'XSRF-TOKEN=eyJpdiI6IkhaZGJTTllReGpkVXpCYzZkSFRMbWc9PSIsInZhbHVlIjoiMDQ5K1BPMDNxNzZ3TkU5aWZPbWhIaFh1ZnhodldUckJTQzJpMyt0aXA4TzVpdUlNcFZ5Ujl1UUVIUTAyY2FQYXpXNnhEZTFXWjJ6Sjh5NmVqZEhKOXVFYXhseHdXQ05JWDh6ZFJYbXN0MEJWek1wOG5UdEh2TFV5V1hrRXJrWjgiLCJtYWMiOiJjYzk5NGVhYjZjNDQwYTA3ZTBkZGVhZWE0NTlhNTUwYzFlMTBjZjdhMGYwYWNkZGQ4ZjgxNTg0NWM1ZGNhMWMwIn0%3D; laravel_session=eyJpdiI6ImdQcTJkSnVCbWlxRlNpeHp1eHdabFE9PSIsInZhbHVlIjoiNkt0cmRmQTNxdkh5NW5IY1VFdWRyclRJUkc0TnU1LzhweWN2QXFSK3lBcXZKRzYrZ0RQTlNzTE5lekZoTWVRNWhoRHdpN2xkcGZEd2lSSWJuYmNRSTdNamFxaUFPR3ppQ092QVozZDFOaXo1bFRCYmdZQWYxTjZNYlg4ZEM1c0kiLCJtYWMiOiJlODEwZTNmZjY4ZjJiZDVjZjcyYzZhMmY5MWQwZjM1MDc3NDExMjhkZmQ5Yzg4YmQ3YTQxYzM5NTA5NmI3OGUwIn0%3D; PHPSESSID=sqa7hvfnrpvat53h44i8an4j9h; _csrf=00490c1f716644f76d79cbf82ccd512df15351cf9b9c62494bf45a48964520d7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22i0jWj1meIwq9Hx55-fhCPh7gcTaQc-nP%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'REQUEST_TIME_FLOAT' => 1607696987.9207
+    'REQUEST_TIME' => 1607696987
+]
+2020-12-11 14:30:02 [127.0.0.1][-][sqa7hvfnrpvat53h44i8an4j9h][error][yii\base\ErrorException:2] yii\base\ErrorException: Invalid argument supplied for foreach() in /home/sandisk/Documents/lspbasic/models/User.php:62
+Stack trace:
+#0 /home/sandisk/Documents/lspbasic/models/User.php(62): yii\base\ErrorHandler->handleError(2, 'Invalid argumen...', '/home/sandisk/D...', 62, Array)
+#1 /home/sandisk/Documents/lspbasic/models/LoginForm.php(76): app\models\User::findByUsername('admin')
+#2 /home/sandisk/Documents/lspbasic/models/LoginForm.php(48): app\models\LoginForm->getUser()
+#3 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/validators/InlineValidator.php(84): app\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'admin')
+#4 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/validators/Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(app\models\LoginForm), 'password')
+#5 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Model.php(368): yii\validators\Validator->validateAttributes(Object(app\models\LoginForm), Array)
+#6 /home/sandisk/Documents/lspbasic/models/LoginForm.php(62): yii\base\Model->validate()
+#7 /home/sandisk/Documents/lspbasic/controllers/SiteController.php(79): app\models\LoginForm->login()
+#8 [internal function]: app\controllers\SiteController->actionLogin()
+#9 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#10 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#11 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#12 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#13 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /home/sandisk/Documents/lspbasic/web/index.php(12): yii\base\Application->run()
+#15 {main}
+2020-12-11 14:30:02 [127.0.0.1][-][sqa7hvfnrpvat53h44i8an4j9h][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'WIMGWWQpxEFjWZsRFVgHrlXkJEBAtBXXQt-olCNpYp0xs2wODhipJCou6ihdIDKbeIJMAxDcIrAhi8nFQEQMzQ=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'XSRF-TOKEN' => 'eyJpdiI6IkhaZGJTTllReGpkVXpCYzZkSFRMbWc9PSIsInZhbHVlIjoiMDQ5K1BPMDNxNzZ3TkU5aWZPbWhIaFh1ZnhodldUckJTQzJpMyt0aXA4TzVpdUlNcFZ5Ujl1UUVIUTAyY2FQYXpXNnhEZTFXWjJ6Sjh5NmVqZEhKOXVFYXhseHdXQ05JWDh6ZFJYbXN0MEJWek1wOG5UdEh2TFV5V1hrRXJrWjgiLCJtYWMiOiJjYzk5NGVhYjZjNDQwYTA3ZTBkZGVhZWE0NTlhNTUwYzFlMTBjZjdhMGYwYWNkZGQ4ZjgxNTg0NWM1ZGNhMWMwIn0='
+    'laravel_session' => 'eyJpdiI6ImdQcTJkSnVCbWlxRlNpeHp1eHdabFE9PSIsInZhbHVlIjoiNkt0cmRmQTNxdkh5NW5IY1VFdWRyclRJUkc0TnU1LzhweWN2QXFSK3lBcXZKRzYrZ0RQTlNzTE5lekZoTWVRNWhoRHdpN2xkcGZEd2lSSWJuYmNRSTdNamFxaUFPR3ppQ092QVozZDFOaXo1bFRCYmdZQWYxTjZNYlg4ZEM1c0kiLCJtYWMiOiJlODEwZTNmZjY4ZjJiZDVjZjcyYzZhMmY5MWQwZjM1MDc3NDExMjhkZmQ5Yzg4YmQ3YTQxYzM5NTA5NmI3OGUwIn0='
+    'PHPSESSID' => 'sqa7hvfnrpvat53h44i8an4j9h'
+    '_csrf' => '00490c1f716644f76d79cbf82ccd512df15351cf9b9c62494bf45a48964520d7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"i0jWj1meIwq9Hx55-fhCPh7gcTaQc-nP\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '34618'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=site%2Flogin'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '228'
+    'HTTP_CONTENT_LENGTH' => '228'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'XSRF-TOKEN=eyJpdiI6IkhaZGJTTllReGpkVXpCYzZkSFRMbWc9PSIsInZhbHVlIjoiMDQ5K1BPMDNxNzZ3TkU5aWZPbWhIaFh1ZnhodldUckJTQzJpMyt0aXA4TzVpdUlNcFZ5Ujl1UUVIUTAyY2FQYXpXNnhEZTFXWjJ6Sjh5NmVqZEhKOXVFYXhseHdXQ05JWDh6ZFJYbXN0MEJWek1wOG5UdEh2TFV5V1hrRXJrWjgiLCJtYWMiOiJjYzk5NGVhYjZjNDQwYTA3ZTBkZGVhZWE0NTlhNTUwYzFlMTBjZjdhMGYwYWNkZGQ4ZjgxNTg0NWM1ZGNhMWMwIn0%3D; laravel_session=eyJpdiI6ImdQcTJkSnVCbWlxRlNpeHp1eHdabFE9PSIsInZhbHVlIjoiNkt0cmRmQTNxdkh5NW5IY1VFdWRyclRJUkc0TnU1LzhweWN2QXFSK3lBcXZKRzYrZ0RQTlNzTE5lekZoTWVRNWhoRHdpN2xkcGZEd2lSSWJuYmNRSTdNamFxaUFPR3ppQ092QVozZDFOaXo1bFRCYmdZQWYxTjZNYlg4ZEM1c0kiLCJtYWMiOiJlODEwZTNmZjY4ZjJiZDVjZjcyYzZhMmY5MWQwZjM1MDc3NDExMjhkZmQ5Yzg4YmQ3YTQxYzM5NTA5NmI3OGUwIn0%3D; PHPSESSID=sqa7hvfnrpvat53h44i8an4j9h; _csrf=00490c1f716644f76d79cbf82ccd512df15351cf9b9c62494bf45a48964520d7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22i0jWj1meIwq9Hx55-fhCPh7gcTaQc-nP%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'REQUEST_TIME_FLOAT' => 1607697002.4722
+    'REQUEST_TIME' => 1607697002
+]
+2020-12-11 14:33:12 [127.0.0.1][-][sqa7hvfnrpvat53h44i8an4j9h][error][yii\base\ErrorException:1] yii\base\ErrorException: Class 'app\models\ActiveRecord' not found in /home/sandisk/Documents/lspbasic/models/User.php:6
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2020-12-11 14:33:12 [127.0.0.1][-][sqa7hvfnrpvat53h44i8an4j9h][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'WIMGWWQpxEFjWZsRFVgHrlXkJEBAtBXXQt-olCNpYp0xs2wODhipJCou6ihdIDKbeIJMAxDcIrAhi8nFQEQMzQ=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'XSRF-TOKEN' => 'eyJpdiI6IkhaZGJTTllReGpkVXpCYzZkSFRMbWc9PSIsInZhbHVlIjoiMDQ5K1BPMDNxNzZ3TkU5aWZPbWhIaFh1ZnhodldUckJTQzJpMyt0aXA4TzVpdUlNcFZ5Ujl1UUVIUTAyY2FQYXpXNnhEZTFXWjJ6Sjh5NmVqZEhKOXVFYXhseHdXQ05JWDh6ZFJYbXN0MEJWek1wOG5UdEh2TFV5V1hrRXJrWjgiLCJtYWMiOiJjYzk5NGVhYjZjNDQwYTA3ZTBkZGVhZWE0NTlhNTUwYzFlMTBjZjdhMGYwYWNkZGQ4ZjgxNTg0NWM1ZGNhMWMwIn0='
+    'laravel_session' => 'eyJpdiI6ImdQcTJkSnVCbWlxRlNpeHp1eHdabFE9PSIsInZhbHVlIjoiNkt0cmRmQTNxdkh5NW5IY1VFdWRyclRJUkc0TnU1LzhweWN2QXFSK3lBcXZKRzYrZ0RQTlNzTE5lekZoTWVRNWhoRHdpN2xkcGZEd2lSSWJuYmNRSTdNamFxaUFPR3ppQ092QVozZDFOaXo1bFRCYmdZQWYxTjZNYlg4ZEM1c0kiLCJtYWMiOiJlODEwZTNmZjY4ZjJiZDVjZjcyYzZhMmY5MWQwZjM1MDc3NDExMjhkZmQ5Yzg4YmQ3YTQxYzM5NTA5NmI3OGUwIn0='
+    'PHPSESSID' => 'sqa7hvfnrpvat53h44i8an4j9h'
+    '_csrf' => '00490c1f716644f76d79cbf82ccd512df15351cf9b9c62494bf45a48964520d7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"i0jWj1meIwq9Hx55-fhCPh7gcTaQc-nP\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '34622'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=site%2Flogin'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '228'
+    'HTTP_CONTENT_LENGTH' => '228'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'XSRF-TOKEN=eyJpdiI6IkhaZGJTTllReGpkVXpCYzZkSFRMbWc9PSIsInZhbHVlIjoiMDQ5K1BPMDNxNzZ3TkU5aWZPbWhIaFh1ZnhodldUckJTQzJpMyt0aXA4TzVpdUlNcFZ5Ujl1UUVIUTAyY2FQYXpXNnhEZTFXWjJ6Sjh5NmVqZEhKOXVFYXhseHdXQ05JWDh6ZFJYbXN0MEJWek1wOG5UdEh2TFV5V1hrRXJrWjgiLCJtYWMiOiJjYzk5NGVhYjZjNDQwYTA3ZTBkZGVhZWE0NTlhNTUwYzFlMTBjZjdhMGYwYWNkZGQ4ZjgxNTg0NWM1ZGNhMWMwIn0%3D; laravel_session=eyJpdiI6ImdQcTJkSnVCbWlxRlNpeHp1eHdabFE9PSIsInZhbHVlIjoiNkt0cmRmQTNxdkh5NW5IY1VFdWRyclRJUkc0TnU1LzhweWN2QXFSK3lBcXZKRzYrZ0RQTlNzTE5lekZoTWVRNWhoRHdpN2xkcGZEd2lSSWJuYmNRSTdNamFxaUFPR3ppQ092QVozZDFOaXo1bFRCYmdZQWYxTjZNYlg4ZEM1c0kiLCJtYWMiOiJlODEwZTNmZjY4ZjJiZDVjZjcyYzZhMmY5MWQwZjM1MDc3NDExMjhkZmQ5Yzg4YmQ3YTQxYzM5NTA5NmI3OGUwIn0%3D; PHPSESSID=sqa7hvfnrpvat53h44i8an4j9h; _csrf=00490c1f716644f76d79cbf82ccd512df15351cf9b9c62494bf45a48964520d7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22i0jWj1meIwq9Hx55-fhCPh7gcTaQc-nP%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'REQUEST_TIME_FLOAT' => 1607697192.2102
+    'REQUEST_TIME' => 1607697192
+]
+2020-12-11 14:33:14 [127.0.0.1][-][sqa7hvfnrpvat53h44i8an4j9h][error][yii\base\ErrorException:1] yii\base\ErrorException: Class 'app\models\ActiveRecord' not found in /home/sandisk/Documents/lspbasic/models/User.php:6
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2020-12-11 14:33:14 [127.0.0.1][-][sqa7hvfnrpvat53h44i8an4j9h][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'WIMGWWQpxEFjWZsRFVgHrlXkJEBAtBXXQt-olCNpYp0xs2wODhipJCou6ihdIDKbeIJMAxDcIrAhi8nFQEQMzQ=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'XSRF-TOKEN' => 'eyJpdiI6IkhaZGJTTllReGpkVXpCYzZkSFRMbWc9PSIsInZhbHVlIjoiMDQ5K1BPMDNxNzZ3TkU5aWZPbWhIaFh1ZnhodldUckJTQzJpMyt0aXA4TzVpdUlNcFZ5Ujl1UUVIUTAyY2FQYXpXNnhEZTFXWjJ6Sjh5NmVqZEhKOXVFYXhseHdXQ05JWDh6ZFJYbXN0MEJWek1wOG5UdEh2TFV5V1hrRXJrWjgiLCJtYWMiOiJjYzk5NGVhYjZjNDQwYTA3ZTBkZGVhZWE0NTlhNTUwYzFlMTBjZjdhMGYwYWNkZGQ4ZjgxNTg0NWM1ZGNhMWMwIn0='
+    'laravel_session' => 'eyJpdiI6ImdQcTJkSnVCbWlxRlNpeHp1eHdabFE9PSIsInZhbHVlIjoiNkt0cmRmQTNxdkh5NW5IY1VFdWRyclRJUkc0TnU1LzhweWN2QXFSK3lBcXZKRzYrZ0RQTlNzTE5lekZoTWVRNWhoRHdpN2xkcGZEd2lSSWJuYmNRSTdNamFxaUFPR3ppQ092QVozZDFOaXo1bFRCYmdZQWYxTjZNYlg4ZEM1c0kiLCJtYWMiOiJlODEwZTNmZjY4ZjJiZDVjZjcyYzZhMmY5MWQwZjM1MDc3NDExMjhkZmQ5Yzg4YmQ3YTQxYzM5NTA5NmI3OGUwIn0='
+    'PHPSESSID' => 'sqa7hvfnrpvat53h44i8an4j9h'
+    '_csrf' => '00490c1f716644f76d79cbf82ccd512df15351cf9b9c62494bf45a48964520d7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"i0jWj1meIwq9Hx55-fhCPh7gcTaQc-nP\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '34624'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=site%2Flogin'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '228'
+    'HTTP_CONTENT_LENGTH' => '228'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'XSRF-TOKEN=eyJpdiI6IkhaZGJTTllReGpkVXpCYzZkSFRMbWc9PSIsInZhbHVlIjoiMDQ5K1BPMDNxNzZ3TkU5aWZPbWhIaFh1ZnhodldUckJTQzJpMyt0aXA4TzVpdUlNcFZ5Ujl1UUVIUTAyY2FQYXpXNnhEZTFXWjJ6Sjh5NmVqZEhKOXVFYXhseHdXQ05JWDh6ZFJYbXN0MEJWek1wOG5UdEh2TFV5V1hrRXJrWjgiLCJtYWMiOiJjYzk5NGVhYjZjNDQwYTA3ZTBkZGVhZWE0NTlhNTUwYzFlMTBjZjdhMGYwYWNkZGQ4ZjgxNTg0NWM1ZGNhMWMwIn0%3D; laravel_session=eyJpdiI6ImdQcTJkSnVCbWlxRlNpeHp1eHdabFE9PSIsInZhbHVlIjoiNkt0cmRmQTNxdkh5NW5IY1VFdWRyclRJUkc0TnU1LzhweWN2QXFSK3lBcXZKRzYrZ0RQTlNzTE5lekZoTWVRNWhoRHdpN2xkcGZEd2lSSWJuYmNRSTdNamFxaUFPR3ppQ092QVozZDFOaXo1bFRCYmdZQWYxTjZNYlg4ZEM1c0kiLCJtYWMiOiJlODEwZTNmZjY4ZjJiZDVjZjcyYzZhMmY5MWQwZjM1MDc3NDExMjhkZmQ5Yzg4YmQ3YTQxYzM5NTA5NmI3OGUwIn0%3D; PHPSESSID=sqa7hvfnrpvat53h44i8an4j9h; _csrf=00490c1f716644f76d79cbf82ccd512df15351cf9b9c62494bf45a48964520d7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22i0jWj1meIwq9Hx55-fhCPh7gcTaQc-nP%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'REQUEST_TIME_FLOAT' => 1607697194.9604
+    'REQUEST_TIME' => 1607697194
+]
+2020-12-11 14:33:44 [127.0.0.1][-][sqa7hvfnrpvat53h44i8an4j9h][error][TypeError] TypeError: Argument 1 passed to yii\web\User::login() must be an instance of yii\web\IdentityInterface, instance of app\models\User given, called in /home/sandisk/Documents/lspbasic/models/LoginForm.php on line 63 and defined in /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/User.php:251
+Stack trace:
+#0 /home/sandisk/Documents/lspbasic/models/LoginForm.php(63): yii\web\User->login(Object(app\models\User), 2592000)
+#1 /home/sandisk/Documents/lspbasic/controllers/SiteController.php(79): app\models\LoginForm->login()
+#2 [internal function]: app\controllers\SiteController->actionLogin()
+#3 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#4 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#5 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#6 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#7 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /home/sandisk/Documents/lspbasic/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2020-12-11 14:33:44 [127.0.0.1][-][sqa7hvfnrpvat53h44i8an4j9h][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'WIMGWWQpxEFjWZsRFVgHrlXkJEBAtBXXQt-olCNpYp0xs2wODhipJCou6ihdIDKbeIJMAxDcIrAhi8nFQEQMzQ=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'XSRF-TOKEN' => 'eyJpdiI6IkhaZGJTTllReGpkVXpCYzZkSFRMbWc9PSIsInZhbHVlIjoiMDQ5K1BPMDNxNzZ3TkU5aWZPbWhIaFh1ZnhodldUckJTQzJpMyt0aXA4TzVpdUlNcFZ5Ujl1UUVIUTAyY2FQYXpXNnhEZTFXWjJ6Sjh5NmVqZEhKOXVFYXhseHdXQ05JWDh6ZFJYbXN0MEJWek1wOG5UdEh2TFV5V1hrRXJrWjgiLCJtYWMiOiJjYzk5NGVhYjZjNDQwYTA3ZTBkZGVhZWE0NTlhNTUwYzFlMTBjZjdhMGYwYWNkZGQ4ZjgxNTg0NWM1ZGNhMWMwIn0='
+    'laravel_session' => 'eyJpdiI6ImdQcTJkSnVCbWlxRlNpeHp1eHdabFE9PSIsInZhbHVlIjoiNkt0cmRmQTNxdkh5NW5IY1VFdWRyclRJUkc0TnU1LzhweWN2QXFSK3lBcXZKRzYrZ0RQTlNzTE5lekZoTWVRNWhoRHdpN2xkcGZEd2lSSWJuYmNRSTdNamFxaUFPR3ppQ092QVozZDFOaXo1bFRCYmdZQWYxTjZNYlg4ZEM1c0kiLCJtYWMiOiJlODEwZTNmZjY4ZjJiZDVjZjcyYzZhMmY5MWQwZjM1MDc3NDExMjhkZmQ5Yzg4YmQ3YTQxYzM5NTA5NmI3OGUwIn0='
+    'PHPSESSID' => 'sqa7hvfnrpvat53h44i8an4j9h'
+    '_csrf' => '00490c1f716644f76d79cbf82ccd512df15351cf9b9c62494bf45a48964520d7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"i0jWj1meIwq9Hx55-fhCPh7gcTaQc-nP\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '34626'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=site%2Flogin'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '228'
+    'HTTP_CONTENT_LENGTH' => '228'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'XSRF-TOKEN=eyJpdiI6IkhaZGJTTllReGpkVXpCYzZkSFRMbWc9PSIsInZhbHVlIjoiMDQ5K1BPMDNxNzZ3TkU5aWZPbWhIaFh1ZnhodldUckJTQzJpMyt0aXA4TzVpdUlNcFZ5Ujl1UUVIUTAyY2FQYXpXNnhEZTFXWjJ6Sjh5NmVqZEhKOXVFYXhseHdXQ05JWDh6ZFJYbXN0MEJWek1wOG5UdEh2TFV5V1hrRXJrWjgiLCJtYWMiOiJjYzk5NGVhYjZjNDQwYTA3ZTBkZGVhZWE0NTlhNTUwYzFlMTBjZjdhMGYwYWNkZGQ4ZjgxNTg0NWM1ZGNhMWMwIn0%3D; laravel_session=eyJpdiI6ImdQcTJkSnVCbWlxRlNpeHp1eHdabFE9PSIsInZhbHVlIjoiNkt0cmRmQTNxdkh5NW5IY1VFdWRyclRJUkc0TnU1LzhweWN2QXFSK3lBcXZKRzYrZ0RQTlNzTE5lekZoTWVRNWhoRHdpN2xkcGZEd2lSSWJuYmNRSTdNamFxaUFPR3ppQ092QVozZDFOaXo1bFRCYmdZQWYxTjZNYlg4ZEM1c0kiLCJtYWMiOiJlODEwZTNmZjY4ZjJiZDVjZjcyYzZhMmY5MWQwZjM1MDc3NDExMjhkZmQ5Yzg4YmQ3YTQxYzM5NTA5NmI3OGUwIn0%3D; PHPSESSID=sqa7hvfnrpvat53h44i8an4j9h; _csrf=00490c1f716644f76d79cbf82ccd512df15351cf9b9c62494bf45a48964520d7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22i0jWj1meIwq9Hx55-fhCPh7gcTaQc-nP%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'REQUEST_TIME_FLOAT' => 1607697224.0559
+    'REQUEST_TIME' => 1607697224
+]
+2020-12-11 14:38:36 [127.0.0.1][-][sqa7hvfnrpvat53h44i8an4j9h][error][Error] Error: Call to undefined method app\models\User::findByUsername() in /home/sandisk/Documents/lspbasic/models/LoginForm.php:76
+Stack trace:
+#0 /home/sandisk/Documents/lspbasic/models/LoginForm.php(48): app\models\LoginForm->getUser()
+#1 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/validators/InlineValidator.php(84): app\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'admin')
+#2 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/validators/Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(app\models\LoginForm), 'password')
+#3 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Model.php(368): yii\validators\Validator->validateAttributes(Object(app\models\LoginForm), Array)
+#4 /home/sandisk/Documents/lspbasic/models/LoginForm.php(62): yii\base\Model->validate()
+#5 /home/sandisk/Documents/lspbasic/controllers/SiteController.php(79): app\models\LoginForm->login()
+#6 [internal function]: app\controllers\SiteController->actionLogin()
+#7 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#9 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#10 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#11 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /home/sandisk/Documents/lspbasic/web/index.php(12): yii\base\Application->run()
+#13 {main}
+2020-12-11 14:38:36 [127.0.0.1][-][sqa7hvfnrpvat53h44i8an4j9h][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'WIMGWWQpxEFjWZsRFVgHrlXkJEBAtBXXQt-olCNpYp0xs2wODhipJCou6ihdIDKbeIJMAxDcIrAhi8nFQEQMzQ=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'XSRF-TOKEN' => 'eyJpdiI6IkhaZGJTTllReGpkVXpCYzZkSFRMbWc9PSIsInZhbHVlIjoiMDQ5K1BPMDNxNzZ3TkU5aWZPbWhIaFh1ZnhodldUckJTQzJpMyt0aXA4TzVpdUlNcFZ5Ujl1UUVIUTAyY2FQYXpXNnhEZTFXWjJ6Sjh5NmVqZEhKOXVFYXhseHdXQ05JWDh6ZFJYbXN0MEJWek1wOG5UdEh2TFV5V1hrRXJrWjgiLCJtYWMiOiJjYzk5NGVhYjZjNDQwYTA3ZTBkZGVhZWE0NTlhNTUwYzFlMTBjZjdhMGYwYWNkZGQ4ZjgxNTg0NWM1ZGNhMWMwIn0='
+    'laravel_session' => 'eyJpdiI6ImdQcTJkSnVCbWlxRlNpeHp1eHdabFE9PSIsInZhbHVlIjoiNkt0cmRmQTNxdkh5NW5IY1VFdWRyclRJUkc0TnU1LzhweWN2QXFSK3lBcXZKRzYrZ0RQTlNzTE5lekZoTWVRNWhoRHdpN2xkcGZEd2lSSWJuYmNRSTdNamFxaUFPR3ppQ092QVozZDFOaXo1bFRCYmdZQWYxTjZNYlg4ZEM1c0kiLCJtYWMiOiJlODEwZTNmZjY4ZjJiZDVjZjcyYzZhMmY5MWQwZjM1MDc3NDExMjhkZmQ5Yzg4YmQ3YTQxYzM5NTA5NmI3OGUwIn0='
+    'PHPSESSID' => 'sqa7hvfnrpvat53h44i8an4j9h'
+    '_csrf' => '00490c1f716644f76d79cbf82ccd512df15351cf9b9c62494bf45a48964520d7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"i0jWj1meIwq9Hx55-fhCPh7gcTaQc-nP\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '34632'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=site%2Flogin'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '228'
+    'HTTP_CONTENT_LENGTH' => '228'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'XSRF-TOKEN=eyJpdiI6IkhaZGJTTllReGpkVXpCYzZkSFRMbWc9PSIsInZhbHVlIjoiMDQ5K1BPMDNxNzZ3TkU5aWZPbWhIaFh1ZnhodldUckJTQzJpMyt0aXA4TzVpdUlNcFZ5Ujl1UUVIUTAyY2FQYXpXNnhEZTFXWjJ6Sjh5NmVqZEhKOXVFYXhseHdXQ05JWDh6ZFJYbXN0MEJWek1wOG5UdEh2TFV5V1hrRXJrWjgiLCJtYWMiOiJjYzk5NGVhYjZjNDQwYTA3ZTBkZGVhZWE0NTlhNTUwYzFlMTBjZjdhMGYwYWNkZGQ4ZjgxNTg0NWM1ZGNhMWMwIn0%3D; laravel_session=eyJpdiI6ImdQcTJkSnVCbWlxRlNpeHp1eHdabFE9PSIsInZhbHVlIjoiNkt0cmRmQTNxdkh5NW5IY1VFdWRyclRJUkc0TnU1LzhweWN2QXFSK3lBcXZKRzYrZ0RQTlNzTE5lekZoTWVRNWhoRHdpN2xkcGZEd2lSSWJuYmNRSTdNamFxaUFPR3ppQ092QVozZDFOaXo1bFRCYmdZQWYxTjZNYlg4ZEM1c0kiLCJtYWMiOiJlODEwZTNmZjY4ZjJiZDVjZjcyYzZhMmY5MWQwZjM1MDc3NDExMjhkZmQ5Yzg4YmQ3YTQxYzM5NTA5NmI3OGUwIn0%3D; PHPSESSID=sqa7hvfnrpvat53h44i8an4j9h; _csrf=00490c1f716644f76d79cbf82ccd512df15351cf9b9c62494bf45a48964520d7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22i0jWj1meIwq9Hx55-fhCPh7gcTaQc-nP%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'REQUEST_TIME_FLOAT' => 1607697516.53
+    'REQUEST_TIME' => 1607697516
+]
+2020-12-11 14:44:55 [127.0.0.1][-][f8kl5736tr9m0liplsaoq0dmms][error][yii\base\ErrorException:2] yii\base\ErrorException: Use of undefined constant ssss - assumed 'ssss' (this will throw an Error in a future version of PHP) in /home/sandisk/Documents/lspbasic/controllers/SiteController.php:37
+Stack trace:
+#0 /home/sandisk/Documents/lspbasic/controllers/SiteController.php(37): yii\base\ErrorHandler->handleError(2, 'Use of undefine...', '/home/sandisk/D...', 37, Array)
+#1 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Component.php(734): app\controllers\SiteController->behaviors()
+#2 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Component.php(604): yii\base\Component->ensureBehaviors()
+#3 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Controller.php(300): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#4 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/Controller.php(207): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Controller.php(179): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('index', Array)
+#7 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/index', Array)
+#8 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /home/sandisk/Documents/lspbasic/web/index.php(12): yii\base\Application->run()
+#10 {main}
+2020-12-11 14:44:55 [127.0.0.1][-][f8kl5736tr9m0liplsaoq0dmms][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'XSRF-TOKEN' => 'eyJpdiI6IkhaZGJTTllReGpkVXpCYzZkSFRMbWc9PSIsInZhbHVlIjoiMDQ5K1BPMDNxNzZ3TkU5aWZPbWhIaFh1ZnhodldUckJTQzJpMyt0aXA4TzVpdUlNcFZ5Ujl1UUVIUTAyY2FQYXpXNnhEZTFXWjJ6Sjh5NmVqZEhKOXVFYXhseHdXQ05JWDh6ZFJYbXN0MEJWek1wOG5UdEh2TFV5V1hrRXJrWjgiLCJtYWMiOiJjYzk5NGVhYjZjNDQwYTA3ZTBkZGVhZWE0NTlhNTUwYzFlMTBjZjdhMGYwYWNkZGQ4ZjgxNTg0NWM1ZGNhMWMwIn0='
+    'laravel_session' => 'eyJpdiI6ImdQcTJkSnVCbWlxRlNpeHp1eHdabFE9PSIsInZhbHVlIjoiNkt0cmRmQTNxdkh5NW5IY1VFdWRyclRJUkc0TnU1LzhweWN2QXFSK3lBcXZKRzYrZ0RQTlNzTE5lekZoTWVRNWhoRHdpN2xkcGZEd2lSSWJuYmNRSTdNamFxaUFPR3ppQ092QVozZDFOaXo1bFRCYmdZQWYxTjZNYlg4ZEM1c0kiLCJtYWMiOiJlODEwZTNmZjY4ZjJiZDVjZjcyYzZhMmY5MWQwZjM1MDc3NDExMjhkZmQ5Yzg4YmQ3YTQxYzM5NTA5NmI3OGUwIn0='
+    'PHPSESSID' => 'f8kl5736tr9m0liplsaoq0dmms'
+    '_csrf' => 'b4c0ac1585d9fed0a0197089017a6bef2b6349268a55f8a6e552096e78329a9ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"LD8R3vy57XDlMRzN6fpF-YDHrGmVlUMP\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '34748'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Findex'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=site%2Findex'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'XSRF-TOKEN=eyJpdiI6IkhaZGJTTllReGpkVXpCYzZkSFRMbWc9PSIsInZhbHVlIjoiMDQ5K1BPMDNxNzZ3TkU5aWZPbWhIaFh1ZnhodldUckJTQzJpMyt0aXA4TzVpdUlNcFZ5Ujl1UUVIUTAyY2FQYXpXNnhEZTFXWjJ6Sjh5NmVqZEhKOXVFYXhseHdXQ05JWDh6ZFJYbXN0MEJWek1wOG5UdEh2TFV5V1hrRXJrWjgiLCJtYWMiOiJjYzk5NGVhYjZjNDQwYTA3ZTBkZGVhZWE0NTlhNTUwYzFlMTBjZjdhMGYwYWNkZGQ4ZjgxNTg0NWM1ZGNhMWMwIn0%3D; laravel_session=eyJpdiI6ImdQcTJkSnVCbWlxRlNpeHp1eHdabFE9PSIsInZhbHVlIjoiNkt0cmRmQTNxdkh5NW5IY1VFdWRyclRJUkc0TnU1LzhweWN2QXFSK3lBcXZKRzYrZ0RQTlNzTE5lekZoTWVRNWhoRHdpN2xkcGZEd2lSSWJuYmNRSTdNamFxaUFPR3ppQ092QVozZDFOaXo1bFRCYmdZQWYxTjZNYlg4ZEM1c0kiLCJtYWMiOiJlODEwZTNmZjY4ZjJiZDVjZjcyYzZhMmY5MWQwZjM1MDc3NDExMjhkZmQ5Yzg4YmQ3YTQxYzM5NTA5NmI3OGUwIn0%3D; PHPSESSID=f8kl5736tr9m0liplsaoq0dmms; _csrf=b4c0ac1585d9fed0a0197089017a6bef2b6349268a55f8a6e552096e78329a9ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22LD8R3vy57XDlMRzN6fpF-YDHrGmVlUMP%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'REQUEST_TIME_FLOAT' => 1607697895.6855
+    'REQUEST_TIME' => 1607697895
+]
+2020-12-11 18:31:06 [127.0.0.1][-][u28ap7ptc4sf4n04u7uanggvp9][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "assesor". in /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('assesor', Array)
+#1 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/sandisk/Documents/lspbasic/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/Application.php:116
+Stack trace:
+#0 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/sandisk/Documents/lspbasic/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2020-12-11 18:31:06 [127.0.0.1][-][u28ap7ptc4sf4n04u7uanggvp9][info][application] $_GET = [
+    'r' => 'assesor'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'f440f0d1065ca18f9a8a62edf5363024535f7d124d52ddd71bc069fe61e551f1a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"-lhvb_rhDM9nxDkQxSN2pFaPP6Y43qoL\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '37250'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=assesor'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=assesor'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_csrf=f440f0d1065ca18f9a8a62edf5363024535f7d124d52ddd71bc069fe61e551f1a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22-lhvb_rhDM9nxDkQxSN2pFaPP6Y43qoL%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'REQUEST_TIME_FLOAT' => 1607711466.7341
+    'REQUEST_TIME' => 1607711466
+]
+2020-12-12 22:05:26 [127.0.0.1][-][9l0dospc0tehbhk1cqa0i4pl4l][error][yii\base\ErrorException:2] yii\base\ErrorException: Invalid argument supplied for foreach() in /home/sandisk/Documents/lspbasic/models/User.php:47
+Stack trace:
+#0 /home/sandisk/Documents/lspbasic/models/User.php(47): yii\base\ErrorHandler->handleError(2, 'Invalid argumen...', '/home/sandisk/D...', 47, Array)
+#1 /home/sandisk/Documents/lspbasic/models/LoginForm.php(76): app\models\User::findByUsername('demo')
+#2 /home/sandisk/Documents/lspbasic/models/LoginForm.php(48): app\models\LoginForm->getUser()
+#3 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/validators/InlineValidator.php(84): app\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'demo')
+#4 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/validators/Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(app\models\LoginForm), 'password')
+#5 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Model.php(368): yii\validators\Validator->validateAttributes(Object(app\models\LoginForm), Array)
+#6 /home/sandisk/Documents/lspbasic/models/LoginForm.php(62): yii\base\Model->validate()
+#7 /home/sandisk/Documents/lspbasic/controllers/SiteController.php(79): app\models\LoginForm->login()
+#8 [internal function]: app\controllers\SiteController->actionLogin()
+#9 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#10 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#11 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#12 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#13 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /home/sandisk/Documents/lspbasic/web/index.php(12): yii\base\Application->run()
+#15 {main}
+2020-12-12 22:05:26 [127.0.0.1][-][9l0dospc0tehbhk1cqa0i4pl4l][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'BZMjwEY2ZAVZ5uMzCRNFcenHlrqtaZ2m4u04u6yNA75_wXaSGXNdNAiitWF-PmgS25_F1p4TpZewrFHJ_f1bxg=='
+    'LoginForm' => [
+        'username' => 'demo'
+        'password' => 'demo'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'kfg2b2qolle3goh1u8otqgq360'
+    '_csrf-backend' => '8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK\";}'
+    'advanced-frontend' => 'fu8t1svhuoksm2r8oh0ho32ka6'
+    '_csrf-frontend' => '0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o\";}'
+    'PHPSESSID' => '9l0dospc0tehbhk1cqa0i4pl4l'
+    '_csrf' => 'df1f898acc0f6c60996e90a11f8c96bbe08cf2b77fbdfbf24aa1fc82fa220675a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"zRUR_E91QDVRw--c2XSl3z81RAirQpXx\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '45808'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '226'
+    'HTTP_CONTENT_LENGTH' => '226'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=site%2Flogin'
+    'HTTP_COOKIE' => 'advanced-backend=kfg2b2qolle3goh1u8otqgq360; _csrf-backend=8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK%22%3B%7D; advanced-frontend=fu8t1svhuoksm2r8oh0ho32ka6; _csrf-frontend=0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o%22%3B%7D; PHPSESSID=9l0dospc0tehbhk1cqa0i4pl4l; _csrf=df1f898acc0f6c60996e90a11f8c96bbe08cf2b77fbdfbf24aa1fc82fa220675a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22zRUR_E91QDVRw--c2XSl3z81RAirQpXx%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'REQUEST_TIME_FLOAT' => 1607810726.0705
+    'REQUEST_TIME' => 1607810726
+]
+2020-12-12 22:05:40 [127.0.0.1][-][9l0dospc0tehbhk1cqa0i4pl4l][error][yii\base\ErrorException:2] yii\base\ErrorException: Invalid argument supplied for foreach() in /home/sandisk/Documents/lspbasic/models/User.php:47
+Stack trace:
+#0 /home/sandisk/Documents/lspbasic/models/User.php(47): yii\base\ErrorHandler->handleError(2, 'Invalid argumen...', '/home/sandisk/D...', 47, Array)
+#1 /home/sandisk/Documents/lspbasic/models/LoginForm.php(76): app\models\User::findByUsername('admin')
+#2 /home/sandisk/Documents/lspbasic/models/LoginForm.php(48): app\models\LoginForm->getUser()
+#3 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/validators/InlineValidator.php(84): app\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'admin')
+#4 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/validators/Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(app\models\LoginForm), 'password')
+#5 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Model.php(368): yii\validators\Validator->validateAttributes(Object(app\models\LoginForm), Array)
+#6 /home/sandisk/Documents/lspbasic/models/LoginForm.php(62): yii\base\Model->validate()
+#7 /home/sandisk/Documents/lspbasic/controllers/SiteController.php(79): app\models\LoginForm->login()
+#8 [internal function]: app\controllers\SiteController->actionLogin()
+#9 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#10 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#11 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#12 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#13 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /home/sandisk/Documents/lspbasic/web/index.php(12): yii\base\Application->run()
+#15 {main}
+2020-12-12 22:05:40 [127.0.0.1][-][9l0dospc0tehbhk1cqa0i4pl4l][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => '26OSMZ7Cndd7FowPqRqnpDMnHxsYjkBpANHlKTwPm_eh8cdjwYek5ipS2l3eN4rHAX9Mdyv0eFhSkIxbbX_Djw=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'kfg2b2qolle3goh1u8otqgq360'
+    '_csrf-backend' => '8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK\";}'
+    'advanced-frontend' => 'fu8t1svhuoksm2r8oh0ho32ka6'
+    '_csrf-frontend' => '0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o\";}'
+    'PHPSESSID' => '9l0dospc0tehbhk1cqa0i4pl4l'
+    '_csrf' => 'df1f898acc0f6c60996e90a11f8c96bbe08cf2b77fbdfbf24aa1fc82fa220675a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"zRUR_E91QDVRw--c2XSl3z81RAirQpXx\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '45816'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '228'
+    'HTTP_CONTENT_LENGTH' => '228'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=site%2Flogin'
+    'HTTP_COOKIE' => 'advanced-backend=kfg2b2qolle3goh1u8otqgq360; _csrf-backend=8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK%22%3B%7D; advanced-frontend=fu8t1svhuoksm2r8oh0ho32ka6; _csrf-frontend=0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o%22%3B%7D; PHPSESSID=9l0dospc0tehbhk1cqa0i4pl4l; _csrf=df1f898acc0f6c60996e90a11f8c96bbe08cf2b77fbdfbf24aa1fc82fa220675a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22zRUR_E91QDVRw--c2XSl3z81RAirQpXx%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'REQUEST_TIME_FLOAT' => 1607810740.4426
+    'REQUEST_TIME' => 1607810740
+]
+2020-12-12 22:08:10 [127.0.0.1][-][9l0dospc0tehbhk1cqa0i4pl4l][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'app\models\User' in file: /home/sandisk/Documents/lspbasic/models/User.php. Namespace missing? in /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\models\\User')
+#1 /home/sandisk/Documents/lspbasic/models/LoginForm.php(76): spl_autoload_call('app\\models\\User')
+#2 /home/sandisk/Documents/lspbasic/models/LoginForm.php(48): app\models\LoginForm->getUser()
+#3 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/validators/InlineValidator.php(84): app\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'admin')
+#4 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/validators/Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(app\models\LoginForm), 'password')
+#5 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Model.php(368): yii\validators\Validator->validateAttributes(Object(app\models\LoginForm), Array)
+#6 /home/sandisk/Documents/lspbasic/models/LoginForm.php(62): yii\base\Model->validate()
+#7 /home/sandisk/Documents/lspbasic/controllers/SiteController.php(79): app\models\LoginForm->login()
+#8 [internal function]: app\controllers\SiteController->actionLogin()
+#9 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#10 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#11 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#12 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#13 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /home/sandisk/Documents/lspbasic/web/index.php(12): yii\base\Application->run()
+#15 {main}
+2020-12-12 22:08:10 [127.0.0.1][-][9l0dospc0tehbhk1cqa0i4pl4l][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => '26OSMZ7Cndd7FowPqRqnpDMnHxsYjkBpANHlKTwPm_eh8cdjwYek5ipS2l3eN4rHAX9Mdyv0eFhSkIxbbX_Djw=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'kfg2b2qolle3goh1u8otqgq360'
+    '_csrf-backend' => '8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK\";}'
+    'advanced-frontend' => 'fu8t1svhuoksm2r8oh0ho32ka6'
+    '_csrf-frontend' => '0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o\";}'
+    'PHPSESSID' => '9l0dospc0tehbhk1cqa0i4pl4l'
+    '_csrf' => 'df1f898acc0f6c60996e90a11f8c96bbe08cf2b77fbdfbf24aa1fc82fa220675a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"zRUR_E91QDVRw--c2XSl3z81RAirQpXx\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '45820'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=site%2Flogin'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '228'
+    'HTTP_CONTENT_LENGTH' => '228'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'advanced-backend=kfg2b2qolle3goh1u8otqgq360; _csrf-backend=8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK%22%3B%7D; advanced-frontend=fu8t1svhuoksm2r8oh0ho32ka6; _csrf-frontend=0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o%22%3B%7D; PHPSESSID=9l0dospc0tehbhk1cqa0i4pl4l; _csrf=df1f898acc0f6c60996e90a11f8c96bbe08cf2b77fbdfbf24aa1fc82fa220675a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22zRUR_E91QDVRw--c2XSl3z81RAirQpXx%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'REQUEST_TIME_FLOAT' => 1607810890.8377
+    'REQUEST_TIME' => 1607810890
+]
+2020-12-12 22:08:41 [127.0.0.1][-][9l0dospc0tehbhk1cqa0i4pl4l][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: app\models\User::password_hash in /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Component.php:155
+Stack trace:
+#0 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(298): yii\base\Component->__get('password_hash')
+#1 /home/sandisk/Documents/lspbasic/models/User.php(168): yii\db\BaseActiveRecord->__get('password_hash')
+#2 /home/sandisk/Documents/lspbasic/models/LoginForm.php(50): app\models\User->validatePassword('admin')
+#3 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/validators/InlineValidator.php(84): app\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'admin')
+#4 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/validators/Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(app\models\LoginForm), 'password')
+#5 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Model.php(368): yii\validators\Validator->validateAttributes(Object(app\models\LoginForm), Array)
+#6 /home/sandisk/Documents/lspbasic/models/LoginForm.php(62): yii\base\Model->validate()
+#7 /home/sandisk/Documents/lspbasic/controllers/SiteController.php(79): app\models\LoginForm->login()
+#8 [internal function]: app\controllers\SiteController->actionLogin()
+#9 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#10 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#11 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#12 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#13 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /home/sandisk/Documents/lspbasic/web/index.php(12): yii\base\Application->run()
+#15 {main}
+2020-12-12 22:08:39 [127.0.0.1][-][9l0dospc0tehbhk1cqa0i4pl4l][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => '26OSMZ7Cndd7FowPqRqnpDMnHxsYjkBpANHlKTwPm_eh8cdjwYek5ipS2l3eN4rHAX9Mdyv0eFhSkIxbbX_Djw=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'kfg2b2qolle3goh1u8otqgq360'
+    '_csrf-backend' => '8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK\";}'
+    'advanced-frontend' => 'fu8t1svhuoksm2r8oh0ho32ka6'
+    '_csrf-frontend' => '0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o\";}'
+    'PHPSESSID' => '9l0dospc0tehbhk1cqa0i4pl4l'
+    '_csrf' => 'df1f898acc0f6c60996e90a11f8c96bbe08cf2b77fbdfbf24aa1fc82fa220675a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"zRUR_E91QDVRw--c2XSl3z81RAirQpXx\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '45824'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=site%2Flogin'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '228'
+    'HTTP_CONTENT_LENGTH' => '228'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'advanced-backend=kfg2b2qolle3goh1u8otqgq360; _csrf-backend=8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK%22%3B%7D; advanced-frontend=fu8t1svhuoksm2r8oh0ho32ka6; _csrf-frontend=0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o%22%3B%7D; PHPSESSID=9l0dospc0tehbhk1cqa0i4pl4l; _csrf=df1f898acc0f6c60996e90a11f8c96bbe08cf2b77fbdfbf24aa1fc82fa220675a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22zRUR_E91QDVRw--c2XSl3z81RAirQpXx%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'REQUEST_TIME_FLOAT' => 1607810919.7178
+    'REQUEST_TIME' => 1607810919
+]
+2020-12-12 22:09:19 [127.0.0.1][-][9l0dospc0tehbhk1cqa0i4pl4l][error][Error] Error: Class 'app\models\TimestampBehavior' not found in /home/sandisk/Documents/lspbasic/models/User.php:43
+Stack trace:
+#0 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Component.php(734): app\models\User->behaviors()
+#1 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Component.php(604): yii\base\Component->ensureBehaviors()
+#2 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(933): yii\base\Component->trigger('init')
+#3 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\db\BaseActiveRecord->init()
+#4 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(1215): yii\base\BaseObject->__construct()
+#5 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/db/ActiveQueryTrait.php(121): yii\db\BaseActiveRecord::instantiate(Array)
+#6 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/db/ActiveQuery.php(219): yii\db\ActiveQuery->createModels(Array)
+#7 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/db/ActiveQuery.php(306): yii\db\ActiveQuery->populate(Array)
+#8 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(112): yii\db\ActiveQuery->one()
+#9 /home/sandisk/Documents/lspbasic/models/User.php(82): yii\db\BaseActiveRecord::findOne(Array)
+#10 /home/sandisk/Documents/lspbasic/models/LoginForm.php(76): app\models\User::findByUsername('admin')
+#11 /home/sandisk/Documents/lspbasic/models/LoginForm.php(48): app\models\LoginForm->getUser()
+#12 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/validators/InlineValidator.php(84): app\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'admin')
+#13 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/validators/Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(app\models\LoginForm), 'password')
+#14 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Model.php(368): yii\validators\Validator->validateAttributes(Object(app\models\LoginForm), Array)
+#15 /home/sandisk/Documents/lspbasic/models/LoginForm.php(62): yii\base\Model->validate()
+#16 /home/sandisk/Documents/lspbasic/controllers/SiteController.php(79): app\models\LoginForm->login()
+#17 [internal function]: app\controllers\SiteController->actionLogin()
+#18 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#19 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#20 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#21 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#22 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 /home/sandisk/Documents/lspbasic/web/index.php(12): yii\base\Application->run()
+#24 {main}
+2020-12-12 22:09:19 [127.0.0.1][-][9l0dospc0tehbhk1cqa0i4pl4l][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => '26OSMZ7Cndd7FowPqRqnpDMnHxsYjkBpANHlKTwPm_eh8cdjwYek5ipS2l3eN4rHAX9Mdyv0eFhSkIxbbX_Djw=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'kfg2b2qolle3goh1u8otqgq360'
+    '_csrf-backend' => '8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK\";}'
+    'advanced-frontend' => 'fu8t1svhuoksm2r8oh0ho32ka6'
+    '_csrf-frontend' => '0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o\";}'
+    'PHPSESSID' => '9l0dospc0tehbhk1cqa0i4pl4l'
+    '_csrf' => 'df1f898acc0f6c60996e90a11f8c96bbe08cf2b77fbdfbf24aa1fc82fa220675a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"zRUR_E91QDVRw--c2XSl3z81RAirQpXx\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '45828'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=site%2Flogin'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '228'
+    'HTTP_CONTENT_LENGTH' => '228'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'advanced-backend=kfg2b2qolle3goh1u8otqgq360; _csrf-backend=8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK%22%3B%7D; advanced-frontend=fu8t1svhuoksm2r8oh0ho32ka6; _csrf-frontend=0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o%22%3B%7D; PHPSESSID=9l0dospc0tehbhk1cqa0i4pl4l; _csrf=df1f898acc0f6c60996e90a11f8c96bbe08cf2b77fbdfbf24aa1fc82fa220675a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22zRUR_E91QDVRw--c2XSl3z81RAirQpXx%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'REQUEST_TIME_FLOAT' => 1607810959.3425
+    'REQUEST_TIME' => 1607810959
+]
+2020-12-12 22:10:11 [127.0.0.1][1][gvm91qcauu4gqi4vjlndiied66][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: app\models\User::auth_key in /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Component.php:155
+Stack trace:
+#0 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(298): yii\base\Component->__get('auth_key')
+#1 /home/sandisk/Documents/lspbasic/models/User.php(149): yii\db\BaseActiveRecord->__get('auth_key')
+#2 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/User.php(570): app\models\User->getAuthKey()
+#3 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/User.php(667): yii\web\User->sendIdentityCookie(Object(app\models\User), 2592000)
+#4 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/User.php(254): yii\web\User->switchIdentity(Object(app\models\User), 2592000)
+#5 /home/sandisk/Documents/lspbasic/models/LoginForm.php(63): yii\web\User->login(Object(app\models\User), 2592000)
+#6 /home/sandisk/Documents/lspbasic/controllers/SiteController.php(79): app\models\LoginForm->login()
+#7 [internal function]: app\controllers\SiteController->actionLogin()
+#8 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#10 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#11 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#12 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /home/sandisk/Documents/lspbasic/web/index.php(12): yii\base\Application->run()
+#14 {main}
+2020-12-12 22:10:10 [127.0.0.1][1][gvm91qcauu4gqi4vjlndiied66][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => '26OSMZ7Cndd7FowPqRqnpDMnHxsYjkBpANHlKTwPm_eh8cdjwYek5ipS2l3eN4rHAX9Mdyv0eFhSkIxbbX_Djw=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'kfg2b2qolle3goh1u8otqgq360'
+    '_csrf-backend' => '8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK\";}'
+    'advanced-frontend' => 'fu8t1svhuoksm2r8oh0ho32ka6'
+    '_csrf-frontend' => '0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o\";}'
+    'PHPSESSID' => '9l0dospc0tehbhk1cqa0i4pl4l'
+    '_csrf' => 'df1f898acc0f6c60996e90a11f8c96bbe08cf2b77fbdfbf24aa1fc82fa220675a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"zRUR_E91QDVRw--c2XSl3z81RAirQpXx\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '45832'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=site%2Flogin'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '228'
+    'HTTP_CONTENT_LENGTH' => '228'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'advanced-backend=kfg2b2qolle3goh1u8otqgq360; _csrf-backend=8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK%22%3B%7D; advanced-frontend=fu8t1svhuoksm2r8oh0ho32ka6; _csrf-frontend=0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o%22%3B%7D; PHPSESSID=9l0dospc0tehbhk1cqa0i4pl4l; _csrf=df1f898acc0f6c60996e90a11f8c96bbe08cf2b77fbdfbf24aa1fc82fa220675a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22zRUR_E91QDVRw--c2XSl3z81RAirQpXx%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'REQUEST_TIME_FLOAT' => 1607811010.8001
+    'REQUEST_TIME' => 1607811010
+]
+2020-12-12 22:10:11 [127.0.0.1][-][gvm91qcauu4gqi4vjlndiied66][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Key "id" is not a column name and can not be used as a filter in /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/db/ActiveRecord.php:238
+Stack trace:
+#0 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/db/ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition(Array, Array)
+#1 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(Array)
+#2 /home/sandisk/Documents/lspbasic/models/User.php(66): yii\db\BaseActiveRecord::findOne(Array)
+#3 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/User.php(692): app\models\User::findIdentity(1)
+#4 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/User.php(194): yii\web\User->renewAuthStatus()
+#5 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/User.php(362): yii\web\User->getIdentity()
+#6 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Component.php(140): yii\web\User->getIsGuest()
+#7 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2-debug/src/panels/UserPanel.php(83): yii\base\Component->__get('isGuest')
+#8 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\debug\panels\UserPanel->init()
+#9 [internal function]: yii\base\BaseObject->__construct(Array)
+#10 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/di/Container.php(420): ReflectionClass->newInstanceArgs(Array)
+#11 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/di/Container.php(171): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#12 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#13 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2-debug/src/Module.php(252): yii\BaseYii::createObject(Array)
+#14 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2-debug/src/Module.php(223): yii\debug\Module->initPanels()
+#15 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\debug\Module->init()
+#16 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(158): yii\base\BaseObject->__construct(Array)
+#17 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#18 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/di/Container.php(412): ReflectionClass->newInstanceArgs(Array)
+#19 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/di/Container.php(171): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#20 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#21 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(427): yii\BaseYii::createObject(Array, Array)
+#22 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(321): yii\base\Module->getModule('debug')
+#23 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/Application.php(70): yii\base\Application->bootstrap()
+#24 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(279): yii\web\Application->bootstrap()
+#25 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\base\Application->init()
+#26 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(212): yii\base\BaseObject->__construct(Array)
+#27 /home/sandisk/Documents/lspbasic/web/index.php(12): yii\base\Application->__construct(Array)
+#28 {main}
+2020-12-12 22:10:11 [127.0.0.1][-][gvm91qcauu4gqi4vjlndiied66][info][application] $_GET = [
+    'r' => 'debug/default/toolbar'
+    'tag' => '5fd53fc2c3c7f'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'kfg2b2qolle3goh1u8otqgq360'
+    '_csrf-backend' => '8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK\";}'
+    'advanced-frontend' => 'fu8t1svhuoksm2r8oh0ho32ka6'
+    '_csrf-frontend' => '0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o\";}'
+    'PHPSESSID' => 'gvm91qcauu4gqi4vjlndiied66'
+    '_csrf' => 'df1f898acc0f6c60996e90a11f8c96bbe08cf2b77fbdfbf24aa1fc82fa220675a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"zRUR_E91QDVRw--c2XSl3z81RAirQpXx\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '45834'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=debug%2Fdefault%2Ftoolbar&tag=5fd53fc2c3c7f'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=debug%2Fdefault%2Ftoolbar&tag=5fd53fc2c3c7f'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=site%2Flogin'
+    'HTTP_COOKIE' => 'advanced-backend=kfg2b2qolle3goh1u8otqgq360; _csrf-backend=8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK%22%3B%7D; advanced-frontend=fu8t1svhuoksm2r8oh0ho32ka6; _csrf-frontend=0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o%22%3B%7D; PHPSESSID=gvm91qcauu4gqi4vjlndiied66; _csrf=df1f898acc0f6c60996e90a11f8c96bbe08cf2b77fbdfbf24aa1fc82fa220675a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22zRUR_E91QDVRw--c2XSl3z81RAirQpXx%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1607811011.5104
+    'REQUEST_TIME' => 1607811011
+]
+2020-12-12 22:13:43 [127.0.0.1][-][gvm91qcauu4gqi4vjlndiied66][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Key "id" is not a column name and can not be used as a filter in /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/db/ActiveRecord.php:238
+Stack trace:
+#0 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/db/ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition(Array, Array)
+#1 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(Array)
+#2 /home/sandisk/Documents/lspbasic/models/User.php(66): yii\db\BaseActiveRecord::findOne(Array)
+#3 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/User.php(692): app\models\User::findIdentity(1)
+#4 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/User.php(194): yii\web\User->renewAuthStatus()
+#5 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/User.php(362): yii\web\User->getIdentity()
+#6 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Component.php(140): yii\web\User->getIsGuest()
+#7 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2-debug/src/panels/UserPanel.php(83): yii\base\Component->__get('isGuest')
+#8 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\debug\panels\UserPanel->init()
+#9 [internal function]: yii\base\BaseObject->__construct(Array)
+#10 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/di/Container.php(420): ReflectionClass->newInstanceArgs(Array)
+#11 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/di/Container.php(171): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#12 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#13 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2-debug/src/Module.php(252): yii\BaseYii::createObject(Array)
+#14 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2-debug/src/Module.php(223): yii\debug\Module->initPanels()
+#15 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\debug\Module->init()
+#16 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(158): yii\base\BaseObject->__construct(Array)
+#17 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#18 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/di/Container.php(412): ReflectionClass->newInstanceArgs(Array)
+#19 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/di/Container.php(171): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#20 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#21 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(427): yii\BaseYii::createObject(Array, Array)
+#22 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(321): yii\base\Module->getModule('debug')
+#23 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/Application.php(70): yii\base\Application->bootstrap()
+#24 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(279): yii\web\Application->bootstrap()
+#25 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\base\Application->init()
+#26 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(212): yii\base\BaseObject->__construct(Array)
+#27 /home/sandisk/Documents/lspbasic/web/index.php(12): yii\base\Application->__construct(Array)
+#28 {main}
+2020-12-12 22:13:43 [127.0.0.1][-][gvm91qcauu4gqi4vjlndiied66][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'kfg2b2qolle3goh1u8otqgq360'
+    '_csrf-backend' => '8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK\";}'
+    'advanced-frontend' => 'fu8t1svhuoksm2r8oh0ho32ka6'
+    '_csrf-frontend' => '0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o\";}'
+    'PHPSESSID' => 'gvm91qcauu4gqi4vjlndiied66'
+    '_csrf' => 'df1f898acc0f6c60996e90a11f8c96bbe08cf2b77fbdfbf24aa1fc82fa220675a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"zRUR_E91QDVRw--c2XSl3z81RAirQpXx\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '45846'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'advanced-backend=kfg2b2qolle3goh1u8otqgq360; _csrf-backend=8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK%22%3B%7D; advanced-frontend=fu8t1svhuoksm2r8oh0ho32ka6; _csrf-frontend=0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o%22%3B%7D; PHPSESSID=gvm91qcauu4gqi4vjlndiied66; _csrf=df1f898acc0f6c60996e90a11f8c96bbe08cf2b77fbdfbf24aa1fc82fa220675a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22zRUR_E91QDVRw--c2XSl3z81RAirQpXx%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'REQUEST_TIME_FLOAT' => 1607811223.4988
+    'REQUEST_TIME' => 1607811223
+]
+2020-12-12 22:13:44 [127.0.0.1][-][gvm91qcauu4gqi4vjlndiied66][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Key "id" is not a column name and can not be used as a filter in /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/db/ActiveRecord.php:238
+Stack trace:
+#0 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/db/ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition(Array, Array)
+#1 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(Array)
+#2 /home/sandisk/Documents/lspbasic/models/User.php(66): yii\db\BaseActiveRecord::findOne(Array)
+#3 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/User.php(692): app\models\User::findIdentity(1)
+#4 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/User.php(194): yii\web\User->renewAuthStatus()
+#5 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/User.php(362): yii\web\User->getIdentity()
+#6 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Component.php(140): yii\web\User->getIsGuest()
+#7 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2-debug/src/panels/UserPanel.php(83): yii\base\Component->__get('isGuest')
+#8 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\debug\panels\UserPanel->init()
+#9 [internal function]: yii\base\BaseObject->__construct(Array)
+#10 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/di/Container.php(420): ReflectionClass->newInstanceArgs(Array)
+#11 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/di/Container.php(171): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#12 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#13 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2-debug/src/Module.php(252): yii\BaseYii::createObject(Array)
+#14 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2-debug/src/Module.php(223): yii\debug\Module->initPanels()
+#15 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\debug\Module->init()
+#16 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(158): yii\base\BaseObject->__construct(Array)
+#17 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#18 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/di/Container.php(412): ReflectionClass->newInstanceArgs(Array)
+#19 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/di/Container.php(171): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#20 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#21 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(427): yii\BaseYii::createObject(Array, Array)
+#22 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(321): yii\base\Module->getModule('debug')
+#23 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/Application.php(70): yii\base\Application->bootstrap()
+#24 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(279): yii\web\Application->bootstrap()
+#25 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\base\Application->init()
+#26 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(212): yii\base\BaseObject->__construct(Array)
+#27 /home/sandisk/Documents/lspbasic/web/index.php(12): yii\base\Application->__construct(Array)
+#28 {main}
+2020-12-12 22:13:44 [127.0.0.1][-][gvm91qcauu4gqi4vjlndiied66][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'kfg2b2qolle3goh1u8otqgq360'
+    '_csrf-backend' => '8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK\";}'
+    'advanced-frontend' => 'fu8t1svhuoksm2r8oh0ho32ka6'
+    '_csrf-frontend' => '0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o\";}'
+    'PHPSESSID' => 'gvm91qcauu4gqi4vjlndiied66'
+    '_csrf' => 'df1f898acc0f6c60996e90a11f8c96bbe08cf2b77fbdfbf24aa1fc82fa220675a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"zRUR_E91QDVRw--c2XSl3z81RAirQpXx\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '45848'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'advanced-backend=kfg2b2qolle3goh1u8otqgq360; _csrf-backend=8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK%22%3B%7D; advanced-frontend=fu8t1svhuoksm2r8oh0ho32ka6; _csrf-frontend=0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o%22%3B%7D; PHPSESSID=gvm91qcauu4gqi4vjlndiied66; _csrf=df1f898acc0f6c60996e90a11f8c96bbe08cf2b77fbdfbf24aa1fc82fa220675a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22zRUR_E91QDVRw--c2XSl3z81RAirQpXx%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'REQUEST_TIME_FLOAT' => 1607811224.5852
+    'REQUEST_TIME' => 1607811224
+]
+2020-12-12 22:29:54 [127.0.0.1][100][aao3esdq0ulprnojn73pi2g68n][error][ParseError] ParseError: syntax error, unexpected ')', expecting ']' in /home/sandisk/Documents/lspbasic/controllers/SiteController.php:78
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 [internal function]: spl_autoload_call('app\\controllers...')
+#2 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(637): class_exists('app\\controllers...')
+#3 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(596): yii\base\Module->createControllerByID('site')
+#4 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(522): yii\base\Module->createController('logout')
+#5 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/logout', Array)
+#6 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /home/sandisk/Documents/lspbasic/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2020-12-12 22:29:54 [127.0.0.1][100][aao3esdq0ulprnojn73pi2g68n][info][application] $_GET = [
+    'r' => 'site/logout'
+]
+
+$_POST = [
+    '_csrf' => 'DqT1qM4QYISq153HhBqQme2yp5j1P3v007_leXH5ettRwcPMg0FN65610vXhd8re2Ob9-4YPCY2l89dOMo8ogg=='
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'kfg2b2qolle3goh1u8otqgq360'
+    '_csrf-backend' => '8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK\";}'
+    'advanced-frontend' => 'fu8t1svhuoksm2r8oh0ho32ka6'
+    '_csrf-frontend' => '0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o\";}'
+    'PHPSESSID' => 'aao3esdq0ulprnojn73pi2g68n'
+    '_csrf' => '217cf6e0573e4d625ba87c00b4d7a5c40f00d7a5464c438d67317ac987257d29a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_e6dMQ-o4bO2emZG5TZcs0ryvL27CvRY\";}'
+    '_identity' => 'ea37484554b0c2c721e8b3d3ff5f5d689a10fc1d81cc32357756c9a9a50627d2a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '45972'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogout'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogout'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '98'
+    'HTTP_CONTENT_LENGTH' => '98'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php'
+    'HTTP_COOKIE' => 'advanced-backend=kfg2b2qolle3goh1u8otqgq360; _csrf-backend=8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK%22%3B%7D; advanced-frontend=fu8t1svhuoksm2r8oh0ho32ka6; _csrf-frontend=0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o%22%3B%7D; PHPSESSID=aao3esdq0ulprnojn73pi2g68n; _csrf=217cf6e0573e4d625ba87c00b4d7a5c40f00d7a5464c438d67317ac987257d29a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_e6dMQ-o4bO2emZG5TZcs0ryvL27CvRY%22%3B%7D; _identity=ea37484554b0c2c721e8b3d3ff5f5d689a10fc1d81cc32357756c9a9a50627d2a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'REQUEST_TIME_FLOAT' => 1607812194.2032
+    'REQUEST_TIME' => 1607812194
+]
+2020-12-12 22:30:49 [127.0.0.1][-][jf705iqqfncc5ncvvg3e8nh9c6][error][Error] Error: Class 'app\controllers\User' not found in /home/sandisk/Documents/lspbasic/controllers/SiteController.php:78
+Stack trace:
+#0 [internal function]: app\controllers\SiteController->actionLogin()
+#1 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#3 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#4 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#5 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /home/sandisk/Documents/lspbasic/web/index.php(12): yii\base\Application->run()
+#7 {main}
+2020-12-12 22:30:49 [127.0.0.1][-][jf705iqqfncc5ncvvg3e8nh9c6][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'kfg2b2qolle3goh1u8otqgq360'
+    '_csrf-backend' => '8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK\";}'
+    'advanced-frontend' => 'fu8t1svhuoksm2r8oh0ho32ka6'
+    '_csrf-frontend' => '0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o\";}'
+    'PHPSESSID' => 'jf705iqqfncc5ncvvg3e8nh9c6'
+    '_csrf' => '217cf6e0573e4d625ba87c00b4d7a5c40f00d7a5464c438d67317ac987257d29a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_e6dMQ-o4bO2emZG5TZcs0ryvL27CvRY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '45996'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php'
+    'HTTP_COOKIE' => 'advanced-backend=kfg2b2qolle3goh1u8otqgq360; _csrf-backend=8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK%22%3B%7D; advanced-frontend=fu8t1svhuoksm2r8oh0ho32ka6; _csrf-frontend=0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o%22%3B%7D; PHPSESSID=jf705iqqfncc5ncvvg3e8nh9c6; _csrf=217cf6e0573e4d625ba87c00b4d7a5c40f00d7a5464c438d67317ac987257d29a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_e6dMQ-o4bO2emZG5TZcs0ryvL27CvRY%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'REQUEST_TIME_FLOAT' => 1607812249.2331
+    'REQUEST_TIME' => 1607812249
+]
+2020-12-12 22:31:27 [127.0.0.1][-][jf705iqqfncc5ncvvg3e8nh9c6][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: username in /home/sandisk/Documents/lspbasic/controllers/SiteController.php:79
+Stack trace:
+#0 /home/sandisk/Documents/lspbasic/controllers/SiteController.php(79): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/home/sandisk/D...', 79, Array)
+#1 [internal function]: app\controllers\SiteController->actionLogin()
+#2 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#5 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#6 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /home/sandisk/Documents/lspbasic/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2020-12-12 22:31:27 [127.0.0.1][-][jf705iqqfncc5ncvvg3e8nh9c6][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'kfg2b2qolle3goh1u8otqgq360'
+    '_csrf-backend' => '8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK\";}'
+    'advanced-frontend' => 'fu8t1svhuoksm2r8oh0ho32ka6'
+    '_csrf-frontend' => '0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o\";}'
+    'PHPSESSID' => 'jf705iqqfncc5ncvvg3e8nh9c6'
+    '_csrf' => '217cf6e0573e4d625ba87c00b4d7a5c40f00d7a5464c438d67317ac987257d29a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_e6dMQ-o4bO2emZG5TZcs0ryvL27CvRY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '46002'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'advanced-backend=kfg2b2qolle3goh1u8otqgq360; _csrf-backend=8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK%22%3B%7D; advanced-frontend=fu8t1svhuoksm2r8oh0ho32ka6; _csrf-frontend=0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o%22%3B%7D; PHPSESSID=jf705iqqfncc5ncvvg3e8nh9c6; _csrf=217cf6e0573e4d625ba87c00b4d7a5c40f00d7a5464c438d67317ac987257d29a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_e6dMQ-o4bO2emZG5TZcs0ryvL27CvRY%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'REQUEST_TIME_FLOAT' => 1607812287.8437
+    'REQUEST_TIME' => 1607812287
+]
+2020-12-12 22:32:01 [127.0.0.1][-][jf705iqqfncc5ncvvg3e8nh9c6][error][yii\base\ErrorException:2] yii\base\ErrorException: Creating default object from empty value in /home/sandisk/Documents/lspbasic/controllers/SiteController.php:89
+Stack trace:
+#0 /home/sandisk/Documents/lspbasic/controllers/SiteController.php(89): yii\base\ErrorHandler->handleError(2, 'Creating defaul...', '/home/sandisk/D...', 89, Array)
+#1 [internal function]: app\controllers\SiteController->actionLogin()
+#2 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#5 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#6 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /home/sandisk/Documents/lspbasic/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2020-12-12 22:32:01 [127.0.0.1][-][jf705iqqfncc5ncvvg3e8nh9c6][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'kfg2b2qolle3goh1u8otqgq360'
+    '_csrf-backend' => '8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK\";}'
+    'advanced-frontend' => 'fu8t1svhuoksm2r8oh0ho32ka6'
+    '_csrf-frontend' => '0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o\";}'
+    'PHPSESSID' => 'jf705iqqfncc5ncvvg3e8nh9c6'
+    '_csrf' => '217cf6e0573e4d625ba87c00b4d7a5c40f00d7a5464c438d67317ac987257d29a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_e6dMQ-o4bO2emZG5TZcs0ryvL27CvRY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '46006'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'advanced-backend=kfg2b2qolle3goh1u8otqgq360; _csrf-backend=8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK%22%3B%7D; advanced-frontend=fu8t1svhuoksm2r8oh0ho32ka6; _csrf-frontend=0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o%22%3B%7D; PHPSESSID=jf705iqqfncc5ncvvg3e8nh9c6; _csrf=217cf6e0573e4d625ba87c00b4d7a5c40f00d7a5464c438d67317ac987257d29a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_e6dMQ-o4bO2emZG5TZcs0ryvL27CvRY%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'REQUEST_TIME_FLOAT' => 1607812321.6868
+    'REQUEST_TIME' => 1607812321
+]
+2020-12-12 22:33:03 [127.0.0.1][-][jf705iqqfncc5ncvvg3e8nh9c6][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: username in /home/sandisk/Documents/lspbasic/controllers/SiteController.php:80
+Stack trace:
+#0 /home/sandisk/Documents/lspbasic/controllers/SiteController.php(80): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/home/sandisk/D...', 80, Array)
+#1 [internal function]: app\controllers\SiteController->actionLogin()
+#2 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#5 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#6 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /home/sandisk/Documents/lspbasic/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2020-12-12 22:33:03 [127.0.0.1][-][jf705iqqfncc5ncvvg3e8nh9c6][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'M1NLcsW2OA0JVQLQGYgwiTgroohUyW--F-5dgYiCDtBsNn0WiOcVYj03TeJ85WrODX_46yf5Hcdhom-2y_RciQ=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'kfg2b2qolle3goh1u8otqgq360'
+    '_csrf-backend' => '8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK\";}'
+    'advanced-frontend' => 'fu8t1svhuoksm2r8oh0ho32ka6'
+    '_csrf-frontend' => '0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o\";}'
+    'PHPSESSID' => 'jf705iqqfncc5ncvvg3e8nh9c6'
+    '_csrf' => '217cf6e0573e4d625ba87c00b4d7a5c40f00d7a5464c438d67317ac987257d29a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_e6dMQ-o4bO2emZG5TZcs0ryvL27CvRY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '46026'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '228'
+    'HTTP_CONTENT_LENGTH' => '228'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=site%2Flogin'
+    'HTTP_COOKIE' => 'advanced-backend=kfg2b2qolle3goh1u8otqgq360; _csrf-backend=8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK%22%3B%7D; advanced-frontend=fu8t1svhuoksm2r8oh0ho32ka6; _csrf-frontend=0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o%22%3B%7D; PHPSESSID=jf705iqqfncc5ncvvg3e8nh9c6; _csrf=217cf6e0573e4d625ba87c00b4d7a5c40f00d7a5464c438d67317ac987257d29a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_e6dMQ-o4bO2emZG5TZcs0ryvL27CvRY%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'REQUEST_TIME_FLOAT' => 1607812383.9044
+    'REQUEST_TIME' => 1607812383
+]
+2020-12-12 22:34:00 [127.0.0.1][-][jf705iqqfncc5ncvvg3e8nh9c6][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property 'username' of non-object in /home/sandisk/Documents/lspbasic/controllers/SiteController.php:80
+Stack trace:
+#0 /home/sandisk/Documents/lspbasic/controllers/SiteController.php(80): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/home/sandisk/D...', 80, Array)
+#1 [internal function]: app\controllers\SiteController->actionLogin()
+#2 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#5 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#6 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /home/sandisk/Documents/lspbasic/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2020-12-12 22:34:00 [127.0.0.1][-][jf705iqqfncc5ncvvg3e8nh9c6][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'M1NLcsW2OA0JVQLQGYgwiTgroohUyW--F-5dgYiCDtBsNn0WiOcVYj03TeJ85WrODX_46yf5Hcdhom-2y_RciQ=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'kfg2b2qolle3goh1u8otqgq360'
+    '_csrf-backend' => '8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK\";}'
+    'advanced-frontend' => 'fu8t1svhuoksm2r8oh0ho32ka6'
+    '_csrf-frontend' => '0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o\";}'
+    'PHPSESSID' => 'jf705iqqfncc5ncvvg3e8nh9c6'
+    '_csrf' => '217cf6e0573e4d625ba87c00b4d7a5c40f00d7a5464c438d67317ac987257d29a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_e6dMQ-o4bO2emZG5TZcs0ryvL27CvRY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '46028'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=site%2Flogin'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '228'
+    'HTTP_CONTENT_LENGTH' => '228'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'advanced-backend=kfg2b2qolle3goh1u8otqgq360; _csrf-backend=8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK%22%3B%7D; advanced-frontend=fu8t1svhuoksm2r8oh0ho32ka6; _csrf-frontend=0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o%22%3B%7D; PHPSESSID=jf705iqqfncc5ncvvg3e8nh9c6; _csrf=217cf6e0573e4d625ba87c00b4d7a5c40f00d7a5464c438d67317ac987257d29a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_e6dMQ-o4bO2emZG5TZcs0ryvL27CvRY%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'REQUEST_TIME_FLOAT' => 1607812440.2037
+    'REQUEST_TIME' => 1607812440
+]
+2020-12-12 22:34:59 [127.0.0.1][-][jf705iqqfncc5ncvvg3e8nh9c6][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: username in /home/sandisk/Documents/lspbasic/controllers/SiteController.php:81
+Stack trace:
+#0 /home/sandisk/Documents/lspbasic/controllers/SiteController.php(81): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/home/sandisk/D...', 81, Array)
+#1 [internal function]: app\controllers\SiteController->actionLogin()
+#2 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#5 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#6 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /home/sandisk/Documents/lspbasic/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2020-12-12 22:34:59 [127.0.0.1][-][jf705iqqfncc5ncvvg3e8nh9c6][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'M1NLcsW2OA0JVQLQGYgwiTgroohUyW--F-5dgYiCDtBsNn0WiOcVYj03TeJ85WrODX_46yf5Hcdhom-2y_RciQ=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'kfg2b2qolle3goh1u8otqgq360'
+    '_csrf-backend' => '8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK\";}'
+    'advanced-frontend' => 'fu8t1svhuoksm2r8oh0ho32ka6'
+    '_csrf-frontend' => '0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o\";}'
+    'PHPSESSID' => 'jf705iqqfncc5ncvvg3e8nh9c6'
+    '_csrf' => '217cf6e0573e4d625ba87c00b4d7a5c40f00d7a5464c438d67317ac987257d29a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_e6dMQ-o4bO2emZG5TZcs0ryvL27CvRY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '46030'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=site%2Flogin'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '228'
+    'HTTP_CONTENT_LENGTH' => '228'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'advanced-backend=kfg2b2qolle3goh1u8otqgq360; _csrf-backend=8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK%22%3B%7D; advanced-frontend=fu8t1svhuoksm2r8oh0ho32ka6; _csrf-frontend=0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o%22%3B%7D; PHPSESSID=jf705iqqfncc5ncvvg3e8nh9c6; _csrf=217cf6e0573e4d625ba87c00b4d7a5c40f00d7a5464c438d67317ac987257d29a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_e6dMQ-o4bO2emZG5TZcs0ryvL27CvRY%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'REQUEST_TIME_FLOAT' => 1607812499.1343
+    'REQUEST_TIME' => 1607812499
+]
+2020-12-12 22:35:00 [127.0.0.1][-][jf705iqqfncc5ncvvg3e8nh9c6][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: username in /home/sandisk/Documents/lspbasic/controllers/SiteController.php:81
+Stack trace:
+#0 /home/sandisk/Documents/lspbasic/controllers/SiteController.php(81): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/home/sandisk/D...', 81, Array)
+#1 [internal function]: app\controllers\SiteController->actionLogin()
+#2 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#4 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#5 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#6 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /home/sandisk/Documents/lspbasic/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2020-12-12 22:35:00 [127.0.0.1][-][jf705iqqfncc5ncvvg3e8nh9c6][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'M1NLcsW2OA0JVQLQGYgwiTgroohUyW--F-5dgYiCDtBsNn0WiOcVYj03TeJ85WrODX_46yf5Hcdhom-2y_RciQ=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'kfg2b2qolle3goh1u8otqgq360'
+    '_csrf-backend' => '8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK\";}'
+    'advanced-frontend' => 'fu8t1svhuoksm2r8oh0ho32ka6'
+    '_csrf-frontend' => '0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o\";}'
+    'PHPSESSID' => 'jf705iqqfncc5ncvvg3e8nh9c6'
+    '_csrf' => '217cf6e0573e4d625ba87c00b4d7a5c40f00d7a5464c438d67317ac987257d29a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_e6dMQ-o4bO2emZG5TZcs0ryvL27CvRY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '46032'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=site%2Flogin'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '228'
+    'HTTP_CONTENT_LENGTH' => '228'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'advanced-backend=kfg2b2qolle3goh1u8otqgq360; _csrf-backend=8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK%22%3B%7D; advanced-frontend=fu8t1svhuoksm2r8oh0ho32ka6; _csrf-frontend=0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o%22%3B%7D; PHPSESSID=jf705iqqfncc5ncvvg3e8nh9c6; _csrf=217cf6e0573e4d625ba87c00b4d7a5c40f00d7a5464c438d67317ac987257d29a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_e6dMQ-o4bO2emZG5TZcs0ryvL27CvRY%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'REQUEST_TIME_FLOAT' => 1607812500.9746
+    'REQUEST_TIME' => 1607812500
+]
+2020-12-12 22:38:08 [127.0.0.1][-][jf705iqqfncc5ncvvg3e8nh9c6][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: app\models\User::rememberMe in /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Component.php:155
+Stack trace:
+#0 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(298): yii\base\Component->__get('rememberMe')
+#1 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/helpers/BaseHtml.php(2244): yii\db\BaseActiveRecord->__get('rememberMe')
+#2 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/helpers/BaseHtml.php(1600): yii\helpers\BaseHtml::getAttributeValue(Object(app\models\User), 'rememberMe')
+#3 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/helpers/BaseHtml.php(1582): yii\helpers\BaseHtml::activeBooleanInput('checkbox', Object(app\models\User), 'rememberMe', Array)
+#4 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/widgets/ActiveField.php(619): yii\helpers\BaseHtml::activeCheckbox(Object(app\models\User), 'rememberMe', Array)
+#5 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2-bootstrap/src/ActiveField.php(212): yii\widgets\ActiveField->checkbox(Array, false)
+#6 /home/sandisk/Documents/lspbasic/views/site/login.php(32): yii\bootstrap\ActiveField->checkbox(Array)
+#7 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/View.php(348): require('/home/sandisk/D...')
+#8 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/sandisk/D...', Array)
+#9 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/sandisk/D...', Array, Object(app\controllers\SiteController))
+#10 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Controller.php(410): yii\base\View->render('login', Array, Object(app\controllers\SiteController))
+#11 /home/sandisk/Documents/lspbasic/controllers/SiteController.php(90): yii\base\Controller->render('login', Array)
+#12 [internal function]: app\controllers\SiteController->actionLogin()
+#13 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#15 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#16 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#17 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /home/sandisk/Documents/lspbasic/web/index.php(12): yii\base\Application->run()
+#19 {main}
+2020-12-12 22:38:08 [127.0.0.1][-][jf705iqqfncc5ncvvg3e8nh9c6][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'M1NLcsW2OA0JVQLQGYgwiTgroohUyW--F-5dgYiCDtBsNn0WiOcVYj03TeJ85WrODX_46yf5Hcdhom-2y_RciQ=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'kfg2b2qolle3goh1u8otqgq360'
+    '_csrf-backend' => '8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK\";}'
+    'advanced-frontend' => 'fu8t1svhuoksm2r8oh0ho32ka6'
+    '_csrf-frontend' => '0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o\";}'
+    'PHPSESSID' => 'jf705iqqfncc5ncvvg3e8nh9c6'
+    '_csrf' => '217cf6e0573e4d625ba87c00b4d7a5c40f00d7a5464c438d67317ac987257d29a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_e6dMQ-o4bO2emZG5TZcs0ryvL27CvRY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '46046'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=site%2Flogin'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '228'
+    'HTTP_CONTENT_LENGTH' => '228'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'advanced-backend=kfg2b2qolle3goh1u8otqgq360; _csrf-backend=8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK%22%3B%7D; advanced-frontend=fu8t1svhuoksm2r8oh0ho32ka6; _csrf-frontend=0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o%22%3B%7D; PHPSESSID=jf705iqqfncc5ncvvg3e8nh9c6; _csrf=217cf6e0573e4d625ba87c00b4d7a5c40f00d7a5464c438d67317ac987257d29a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_e6dMQ-o4bO2emZG5TZcs0ryvL27CvRY%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'REQUEST_TIME_FLOAT' => 1607812688.0314
+    'REQUEST_TIME' => 1607812688
+]
+2020-12-12 23:00:02 [127.0.0.1][-][2uhph9u6pb2h1qlvqf2hbrngoa][error][Error] Error: Access to undeclared static property: app\models\User::$users in /home/sandisk/Documents/lspbasic/models/User.php:64
+Stack trace:
+#0 /home/sandisk/Documents/lspbasic/models/LoginForm.php(78): app\models\User::findByUsername('admin')
+#1 /home/sandisk/Documents/lspbasic/models/LoginForm.php(48): app\models\LoginForm->getUser()
+#2 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/validators/InlineValidator.php(84): app\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'admin')
+#3 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/validators/Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(app\models\LoginForm), 'password')
+#4 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Model.php(368): yii\validators\Validator->validateAttributes(Object(app\models\LoginForm), Array)
+#5 /home/sandisk/Documents/lspbasic/models/LoginForm.php(62): yii\base\Model->validate()
+#6 /home/sandisk/Documents/lspbasic/controllers/SiteController.php(80): app\models\LoginForm->login()
+#7 [internal function]: app\controllers\SiteController->actionLogin()
+#8 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#10 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#11 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#12 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /home/sandisk/Documents/lspbasic/web/index.php(12): yii\base\Application->run()
+#14 {main}
+2020-12-12 23:00:02 [127.0.0.1][-][2uhph9u6pb2h1qlvqf2hbrngoa][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'j11W5486ej6EXDvDmjojhgSr8KTEQvIIR5sUi_94izK9Hx_f0EwqfLcXdqT-TUXiVOOc6fc4h1wu1HGytUzGcA=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'kfg2b2qolle3goh1u8otqgq360'
+    '_csrf-backend' => '8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK\";}'
+    'advanced-frontend' => 'fu8t1svhuoksm2r8oh0ho32ka6'
+    '_csrf-frontend' => '0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o\";}'
+    'PHPSESSID' => '2uhph9u6pb2h1qlvqf2hbrngoa'
+    '_csrf' => '941ecb7337250f606ef043da2ed4f73e7d24ce6d4684f0ed48b74adbfc65c38da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"2BI8_vPB3KMgdwfdPHlM3zuTiOe9J4MB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '46216'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '228'
+    'HTTP_CONTENT_LENGTH' => '228'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=site%2Flogin'
+    'HTTP_COOKIE' => 'advanced-backend=kfg2b2qolle3goh1u8otqgq360; _csrf-backend=8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK%22%3B%7D; advanced-frontend=fu8t1svhuoksm2r8oh0ho32ka6; _csrf-frontend=0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o%22%3B%7D; PHPSESSID=2uhph9u6pb2h1qlvqf2hbrngoa; _csrf=941ecb7337250f606ef043da2ed4f73e7d24ce6d4684f0ed48b74adbfc65c38da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%222BI8_vPB3KMgdwfdPHlM3zuTiOe9J4MB%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'REQUEST_TIME_FLOAT' => 1607814002.1771
+    'REQUEST_TIME' => 1607814002
+]
+2020-12-12 23:04:29 [127.0.0.1][-][rse4hcqsrtd74tptqtsilqapt8][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property 'username' of non-object in /home/sandisk/Documents/lspbasic/models/User.php:66
+Stack trace:
+#0 /home/sandisk/Documents/lspbasic/models/User.php(66): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/home/sandisk/D...', 66, Array)
+#1 /home/sandisk/Documents/lspbasic/models/LoginForm.php(78): app\models\User::findByUsername('admin')
+#2 /home/sandisk/Documents/lspbasic/models/LoginForm.php(48): app\models\LoginForm->getUser()
+#3 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/validators/InlineValidator.php(84): app\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'admin')
+#4 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/validators/Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(app\models\LoginForm), 'password')
+#5 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Model.php(368): yii\validators\Validator->validateAttributes(Object(app\models\LoginForm), Array)
+#6 /home/sandisk/Documents/lspbasic/models/LoginForm.php(62): yii\base\Model->validate()
+#7 /home/sandisk/Documents/lspbasic/controllers/SiteController.php(80): app\models\LoginForm->login()
+#8 [internal function]: app\controllers\SiteController->actionLogin()
+#9 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#10 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#11 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#12 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#13 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /home/sandisk/Documents/lspbasic/web/index.php(12): yii\base\Application->run()
+#15 {main}
+2020-12-12 23:04:29 [127.0.0.1][-][rse4hcqsrtd74tptqtsilqapt8][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'GSFtseHbXUjpPt7SozcZZ41FhmRp0edpb5Pf8fYlePtKUy7_zIsWHZtd54bIdmMD1H3WF0SolD9a5bKihE8cqA=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'kfg2b2qolle3goh1u8otqgq360'
+    '_csrf-backend' => '8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK\";}'
+    'advanced-frontend' => 'fu8t1svhuoksm2r8oh0ho32ka6'
+    '_csrf-frontend' => '0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o\";}'
+    'PHPSESSID' => 'rse4hcqsrtd74tptqtsilqapt8'
+    '_csrf' => '4b4da0bf8b15f693e2a9807157c84937bc60831dc77db66bb62aa3edddd80047a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SrCN-PKUrc9TkAzdY8Ps-ysV5vmSrjdS\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '46370'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=site%2Flogin'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '228'
+    'HTTP_CONTENT_LENGTH' => '228'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'advanced-backend=kfg2b2qolle3goh1u8otqgq360; _csrf-backend=8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK%22%3B%7D; advanced-frontend=fu8t1svhuoksm2r8oh0ho32ka6; _csrf-frontend=0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o%22%3B%7D; PHPSESSID=rse4hcqsrtd74tptqtsilqapt8; _csrf=4b4da0bf8b15f693e2a9807157c84937bc60831dc77db66bb62aa3edddd80047a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SrCN-PKUrc9TkAzdY8Ps-ysV5vmSrjdS%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'REQUEST_TIME_FLOAT' => 1607814269.5347
+    'REQUEST_TIME' => 1607814269
+]
+2020-12-12 23:06:57 [127.0.0.1][-][rse4hcqsrtd74tptqtsilqapt8][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: self in /home/sandisk/Documents/lspbasic/models/User.php:63
+Stack trace:
+#0 /home/sandisk/Documents/lspbasic/models/User.php(63): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/home/sandisk/D...', 63, Array)
+#1 /home/sandisk/Documents/lspbasic/models/LoginForm.php(78): app\models\User::findByUsername('admin')
+#2 /home/sandisk/Documents/lspbasic/models/LoginForm.php(48): app\models\LoginForm->getUser()
+#3 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/validators/InlineValidator.php(84): app\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'admin')
+#4 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/validators/Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(app\models\LoginForm), 'password')
+#5 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Model.php(368): yii\validators\Validator->validateAttributes(Object(app\models\LoginForm), Array)
+#6 /home/sandisk/Documents/lspbasic/models/LoginForm.php(62): yii\base\Model->validate()
+#7 /home/sandisk/Documents/lspbasic/controllers/SiteController.php(80): app\models\LoginForm->login()
+#8 [internal function]: app\controllers\SiteController->actionLogin()
+#9 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#10 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#11 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#12 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#13 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /home/sandisk/Documents/lspbasic/web/index.php(12): yii\base\Application->run()
+#15 {main}
+2020-12-12 23:06:57 [127.0.0.1][-][rse4hcqsrtd74tptqtsilqapt8][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'JtXcTLp5IdhiwDaK5S_OCv6D1aB1vYtqLKAiPwfifRJ1p58ClylqjRCjD96ObrRup7uF01jE-DwZ1k9sdYgZQQ=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'kfg2b2qolle3goh1u8otqgq360'
+    '_csrf-backend' => '8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK\";}'
+    'advanced-frontend' => 'fu8t1svhuoksm2r8oh0ho32ka6'
+    '_csrf-frontend' => '0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o\";}'
+    'PHPSESSID' => 'rse4hcqsrtd74tptqtsilqapt8'
+    '_csrf' => '4b4da0bf8b15f693e2a9807157c84937bc60831dc77db66bb62aa3edddd80047a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SrCN-PKUrc9TkAzdY8Ps-ysV5vmSrjdS\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '46394'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=site%2Flogin'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '228'
+    'HTTP_CONTENT_LENGTH' => '228'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'advanced-backend=kfg2b2qolle3goh1u8otqgq360; _csrf-backend=8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK%22%3B%7D; advanced-frontend=fu8t1svhuoksm2r8oh0ho32ka6; _csrf-frontend=0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o%22%3B%7D; PHPSESSID=rse4hcqsrtd74tptqtsilqapt8; _csrf=4b4da0bf8b15f693e2a9807157c84937bc60831dc77db66bb62aa3edddd80047a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SrCN-PKUrc9TkAzdY8Ps-ysV5vmSrjdS%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'REQUEST_TIME_FLOAT' => 1607814417.5434
+    'REQUEST_TIME' => 1607814417
+]
+2020-12-12 23:07:11 [127.0.0.1][-][rse4hcqsrtd74tptqtsilqapt8][error][yii\base\ErrorException:2] yii\base\ErrorException: Illegal string offset 'username' in /home/sandisk/Documents/lspbasic/models/User.php:66
+Stack trace:
+#0 /home/sandisk/Documents/lspbasic/models/User.php(66): yii\base\ErrorHandler->handleError(2, 'Illegal string ...', '/home/sandisk/D...', 66, Array)
+#1 /home/sandisk/Documents/lspbasic/models/LoginForm.php(78): app\models\User::findByUsername('admin')
+#2 /home/sandisk/Documents/lspbasic/models/LoginForm.php(48): app\models\LoginForm->getUser()
+#3 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/validators/InlineValidator.php(84): app\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'admin')
+#4 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/validators/Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(app\models\LoginForm), 'password')
+#5 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Model.php(368): yii\validators\Validator->validateAttributes(Object(app\models\LoginForm), Array)
+#6 /home/sandisk/Documents/lspbasic/models/LoginForm.php(62): yii\base\Model->validate()
+#7 /home/sandisk/Documents/lspbasic/controllers/SiteController.php(80): app\models\LoginForm->login()
+#8 [internal function]: app\controllers\SiteController->actionLogin()
+#9 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#10 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#11 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#12 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#13 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /home/sandisk/Documents/lspbasic/web/index.php(12): yii\base\Application->run()
+#15 {main}
+2020-12-12 23:07:11 [127.0.0.1][-][rse4hcqsrtd74tptqtsilqapt8][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'JtXcTLp5IdhiwDaK5S_OCv6D1aB1vYtqLKAiPwfifRJ1p58ClylqjRCjD96ObrRup7uF01jE-DwZ1k9sdYgZQQ=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'kfg2b2qolle3goh1u8otqgq360'
+    '_csrf-backend' => '8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK\";}'
+    'advanced-frontend' => 'fu8t1svhuoksm2r8oh0ho32ka6'
+    '_csrf-frontend' => '0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o\";}'
+    'PHPSESSID' => 'rse4hcqsrtd74tptqtsilqapt8'
+    '_csrf' => '4b4da0bf8b15f693e2a9807157c84937bc60831dc77db66bb62aa3edddd80047a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SrCN-PKUrc9TkAzdY8Ps-ysV5vmSrjdS\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '46396'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=site%2Flogin'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '228'
+    'HTTP_CONTENT_LENGTH' => '228'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'advanced-backend=kfg2b2qolle3goh1u8otqgq360; _csrf-backend=8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK%22%3B%7D; advanced-frontend=fu8t1svhuoksm2r8oh0ho32ka6; _csrf-frontend=0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o%22%3B%7D; PHPSESSID=rse4hcqsrtd74tptqtsilqapt8; _csrf=4b4da0bf8b15f693e2a9807157c84937bc60831dc77db66bb62aa3edddd80047a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SrCN-PKUrc9TkAzdY8Ps-ysV5vmSrjdS%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'REQUEST_TIME_FLOAT' => 1607814431.6787
+    'REQUEST_TIME' => 1607814431
+]
+2020-12-12 23:07:32 [127.0.0.1][-][rse4hcqsrtd74tptqtsilqapt8][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property 'username' of non-object in /home/sandisk/Documents/lspbasic/models/User.php:66
+Stack trace:
+#0 /home/sandisk/Documents/lspbasic/models/User.php(66): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/home/sandisk/D...', 66, Array)
+#1 /home/sandisk/Documents/lspbasic/models/LoginForm.php(78): app\models\User::findByUsername('admin')
+#2 /home/sandisk/Documents/lspbasic/models/LoginForm.php(48): app\models\LoginForm->getUser()
+#3 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/validators/InlineValidator.php(84): app\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'admin')
+#4 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/validators/Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(app\models\LoginForm), 'password')
+#5 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Model.php(368): yii\validators\Validator->validateAttributes(Object(app\models\LoginForm), Array)
+#6 /home/sandisk/Documents/lspbasic/models/LoginForm.php(62): yii\base\Model->validate()
+#7 /home/sandisk/Documents/lspbasic/controllers/SiteController.php(80): app\models\LoginForm->login()
+#8 [internal function]: app\controllers\SiteController->actionLogin()
+#9 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#10 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#11 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#12 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#13 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /home/sandisk/Documents/lspbasic/web/index.php(12): yii\base\Application->run()
+#15 {main}
+2020-12-12 23:07:32 [127.0.0.1][-][rse4hcqsrtd74tptqtsilqapt8][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'JtXcTLp5IdhiwDaK5S_OCv6D1aB1vYtqLKAiPwfifRJ1p58ClylqjRCjD96ObrRup7uF01jE-DwZ1k9sdYgZQQ=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'kfg2b2qolle3goh1u8otqgq360'
+    '_csrf-backend' => '8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK\";}'
+    'advanced-frontend' => 'fu8t1svhuoksm2r8oh0ho32ka6'
+    '_csrf-frontend' => '0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o\";}'
+    'PHPSESSID' => 'rse4hcqsrtd74tptqtsilqapt8'
+    '_csrf' => '4b4da0bf8b15f693e2a9807157c84937bc60831dc77db66bb62aa3edddd80047a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SrCN-PKUrc9TkAzdY8Ps-ysV5vmSrjdS\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '46398'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=site%2Flogin'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '228'
+    'HTTP_CONTENT_LENGTH' => '228'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'advanced-backend=kfg2b2qolle3goh1u8otqgq360; _csrf-backend=8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK%22%3B%7D; advanced-frontend=fu8t1svhuoksm2r8oh0ho32ka6; _csrf-frontend=0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o%22%3B%7D; PHPSESSID=rse4hcqsrtd74tptqtsilqapt8; _csrf=4b4da0bf8b15f693e2a9807157c84937bc60831dc77db66bb62aa3edddd80047a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SrCN-PKUrc9TkAzdY8Ps-ysV5vmSrjdS%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'REQUEST_TIME_FLOAT' => 1607814452.1093
+    'REQUEST_TIME' => 1607814452
+]
+2020-12-12 23:14:59 [127.0.0.1][-][rse4hcqsrtd74tptqtsilqapt8][error][yii\base\ErrorException:2] yii\base\ErrorException: Illegal string offset 'username' in /home/sandisk/Documents/lspbasic/models/User.php:67
+Stack trace:
+#0 /home/sandisk/Documents/lspbasic/models/User.php(67): yii\base\ErrorHandler->handleError(2, 'Illegal string ...', '/home/sandisk/D...', 67, Array)
+#1 /home/sandisk/Documents/lspbasic/models/LoginForm.php(78): app\models\User::findByUsername('admin')
+#2 /home/sandisk/Documents/lspbasic/models/LoginForm.php(48): app\models\LoginForm->getUser()
+#3 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/validators/InlineValidator.php(84): app\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'admin')
+#4 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/validators/Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(app\models\LoginForm), 'password')
+#5 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Model.php(368): yii\validators\Validator->validateAttributes(Object(app\models\LoginForm), Array)
+#6 /home/sandisk/Documents/lspbasic/models/LoginForm.php(62): yii\base\Model->validate()
+#7 /home/sandisk/Documents/lspbasic/controllers/SiteController.php(80): app\models\LoginForm->login()
+#8 [internal function]: app\controllers\SiteController->actionLogin()
+#9 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#10 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#11 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#12 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#13 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /home/sandisk/Documents/lspbasic/web/index.php(12): yii\base\Application->run()
+#15 {main}
+2020-12-12 23:14:59 [127.0.0.1][-][rse4hcqsrtd74tptqtsilqapt8][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'FuewucaXIfNxgWIJiDg0YAeOW0dNTPQFs2WmyUe_SKlFlfP368dqpgPiW13jeU4EXrYLNGA1h1OGE8uaNdUs-g=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'kfg2b2qolle3goh1u8otqgq360'
+    '_csrf-backend' => '8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK\";}'
+    'advanced-frontend' => 'fu8t1svhuoksm2r8oh0ho32ka6'
+    '_csrf-frontend' => '0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o\";}'
+    'PHPSESSID' => 'rse4hcqsrtd74tptqtsilqapt8'
+    '_csrf' => '4b4da0bf8b15f693e2a9807157c84937bc60831dc77db66bb62aa3edddd80047a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SrCN-PKUrc9TkAzdY8Ps-ysV5vmSrjdS\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '46468'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '228'
+    'HTTP_CONTENT_LENGTH' => '228'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=site%2Flogin'
+    'HTTP_COOKIE' => 'advanced-backend=kfg2b2qolle3goh1u8otqgq360; _csrf-backend=8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK%22%3B%7D; advanced-frontend=fu8t1svhuoksm2r8oh0ho32ka6; _csrf-frontend=0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o%22%3B%7D; PHPSESSID=rse4hcqsrtd74tptqtsilqapt8; _csrf=4b4da0bf8b15f693e2a9807157c84937bc60831dc77db66bb62aa3edddd80047a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SrCN-PKUrc9TkAzdY8Ps-ysV5vmSrjdS%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'REQUEST_TIME_FLOAT' => 1607814899.2526
+    'REQUEST_TIME' => 1607814899
+]
+2020-12-12 23:15:27 [127.0.0.1][-][rse4hcqsrtd74tptqtsilqapt8][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: yii\db\ActiveQuery::toArray() in /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Component.php:301
+Stack trace:
+#0 /home/sandisk/Documents/lspbasic/models/User.php(63): yii\base\Component->__call('toArray', Array)
+#1 /home/sandisk/Documents/lspbasic/models/LoginForm.php(78): app\models\User::findByUsername('admin')
+#2 /home/sandisk/Documents/lspbasic/models/LoginForm.php(48): app\models\LoginForm->getUser()
+#3 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/validators/InlineValidator.php(84): app\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'admin')
+#4 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/validators/Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(app\models\LoginForm), 'password')
+#5 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Model.php(368): yii\validators\Validator->validateAttributes(Object(app\models\LoginForm), Array)
+#6 /home/sandisk/Documents/lspbasic/models/LoginForm.php(62): yii\base\Model->validate()
+#7 /home/sandisk/Documents/lspbasic/controllers/SiteController.php(80): app\models\LoginForm->login()
+#8 [internal function]: app\controllers\SiteController->actionLogin()
+#9 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#10 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#11 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#12 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#13 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /home/sandisk/Documents/lspbasic/web/index.php(12): yii\base\Application->run()
+#15 {main}
+2020-12-12 23:15:27 [127.0.0.1][-][rse4hcqsrtd74tptqtsilqapt8][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'FuewucaXIfNxgWIJiDg0YAeOW0dNTPQFs2WmyUe_SKlFlfP368dqpgPiW13jeU4EXrYLNGA1h1OGE8uaNdUs-g=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'kfg2b2qolle3goh1u8otqgq360'
+    '_csrf-backend' => '8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK\";}'
+    'advanced-frontend' => 'fu8t1svhuoksm2r8oh0ho32ka6'
+    '_csrf-frontend' => '0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o\";}'
+    'PHPSESSID' => 'rse4hcqsrtd74tptqtsilqapt8'
+    '_csrf' => '4b4da0bf8b15f693e2a9807157c84937bc60831dc77db66bb62aa3edddd80047a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SrCN-PKUrc9TkAzdY8Ps-ysV5vmSrjdS\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '46470'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=site%2Flogin'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '228'
+    'HTTP_CONTENT_LENGTH' => '228'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'advanced-backend=kfg2b2qolle3goh1u8otqgq360; _csrf-backend=8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK%22%3B%7D; advanced-frontend=fu8t1svhuoksm2r8oh0ho32ka6; _csrf-frontend=0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o%22%3B%7D; PHPSESSID=rse4hcqsrtd74tptqtsilqapt8; _csrf=4b4da0bf8b15f693e2a9807157c84937bc60831dc77db66bb62aa3edddd80047a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SrCN-PKUrc9TkAzdY8Ps-ysV5vmSrjdS%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'REQUEST_TIME_FLOAT' => 1607814927.301
+    'REQUEST_TIME' => 1607814927
+]
+2020-12-12 23:16:29 [127.0.0.1][-][rse4hcqsrtd74tptqtsilqapt8][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: user in /home/sandisk/Documents/lspbasic/models/User.php:67
+Stack trace:
+#0 /home/sandisk/Documents/lspbasic/models/User.php(67): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/home/sandisk/D...', 67, Array)
+#1 /home/sandisk/Documents/lspbasic/models/LoginForm.php(78): app\models\User::findByUsername('admin')
+#2 /home/sandisk/Documents/lspbasic/models/LoginForm.php(48): app\models\LoginForm->getUser()
+#3 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/validators/InlineValidator.php(84): app\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'admin')
+#4 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/validators/Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(app\models\LoginForm), 'password')
+#5 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Model.php(368): yii\validators\Validator->validateAttributes(Object(app\models\LoginForm), Array)
+#6 /home/sandisk/Documents/lspbasic/models/LoginForm.php(62): yii\base\Model->validate()
+#7 /home/sandisk/Documents/lspbasic/controllers/SiteController.php(80): app\models\LoginForm->login()
+#8 [internal function]: app\controllers\SiteController->actionLogin()
+#9 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#10 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#11 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#12 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/web/Application.php(104): yii\base\Module->runAction('site/login', Array)
+#13 /home/sandisk/Documents/lspbasic/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /home/sandisk/Documents/lspbasic/web/index.php(12): yii\base\Application->run()
+#15 {main}
+2020-12-12 23:16:29 [127.0.0.1][-][rse4hcqsrtd74tptqtsilqapt8][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'FuewucaXIfNxgWIJiDg0YAeOW0dNTPQFs2WmyUe_SKlFlfP368dqpgPiW13jeU4EXrYLNGA1h1OGE8uaNdUs-g=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'kfg2b2qolle3goh1u8otqgq360'
+    '_csrf-backend' => '8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK\";}'
+    'advanced-frontend' => 'fu8t1svhuoksm2r8oh0ho32ka6'
+    '_csrf-frontend' => '0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o\";}'
+    'PHPSESSID' => 'rse4hcqsrtd74tptqtsilqapt8'
+    '_csrf' => '4b4da0bf8b15f693e2a9807157c84937bc60831dc77db66bb62aa3edddd80047a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SrCN-PKUrc9TkAzdY8Ps-ysV5vmSrjdS\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => '/home/sandisk/Documents/lspbasic/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '46476'
+    'SERVER_SOFTWARE' => 'PHP 7.2.24-0ubuntu0.18.04.7 Development Server'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => '/home/sandisk/Documents/lspbasic/web/index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=site%2Flogin'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '228'
+    'HTTP_CONTENT_LENGTH' => '228'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'advanced-backend=kfg2b2qolle3goh1u8otqgq360; _csrf-backend=8de3158c6284eedd28a51f1d73178484cf1ffbfbb0ad324c16a9b92af57cbe92a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22EABzwP8yPZTz9zHVT74q4tvRfxQpHEaK%22%3B%7D; advanced-frontend=fu8t1svhuoksm2r8oh0ho32ka6; _csrf-frontend=0e3f5689abbe6af783eda123fd63d347d5d8cf042f52f5ee9fa72c8d2b649605a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22CI44zXcnpFY4MXJB2eKBUJ18ja9LNR_o%22%3B%7D; PHPSESSID=rse4hcqsrtd74tptqtsilqapt8; _csrf=4b4da0bf8b15f693e2a9807157c84937bc60831dc77db66bb62aa3edddd80047a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SrCN-PKUrc9TkAzdY8Ps-ysV5vmSrjdS%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'REQUEST_TIME_FLOAT' => 1607814989.52
+    'REQUEST_TIME' => 1607814989
+]
